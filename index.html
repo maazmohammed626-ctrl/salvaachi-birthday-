@@ -1,0 +1,1986 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Birthday Garden</title>
+    <meta name="theme-color" content="#ffe5eb" />
+    <meta name="description" content="A tiny long-distance birthday garden for my salvaachi." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800&family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=restore-images-20260514" />
+  </head>
+  <body>
+    <div class="love-lock" id="love-lock" role="dialog" aria-modal="true" aria-labelledby="love-lock-title">
+      <div class="love-lock-card">
+        <div class="lock-heart" aria-hidden="true">
+          <span></span>
+        </div>
+        <p class="eyebrow">Private birthday key</p>
+        <h1 id="love-lock-title">Only Salvuu can open this</h1>
+        <p>This little world is locked with Mihruu's favorite code.</p>
+        <form id="love-lock-form">
+          <label for="love-passcode">Secret key</label>
+          <input id="love-passcode" type="password" autocomplete="off" inputmode="text" placeholder="Enter the cute key" />
+          <button class="primary-btn" type="submit">Unlock birthday world</button>
+        </form>
+        <p class="lock-error" id="lock-error">Hint: Mihruu + Salvu, no spaces.</p>
+      </div>
+    </div>
+    <div class="scroll-ribbon" aria-hidden="true"></div>
+    <div class="window-confetti" id="window-confetti" aria-hidden="true"></div>
+    <div class="animated-sky" aria-hidden="true">
+      <span class="cloud cloud-one"></span>
+      <span class="cloud cloud-two"></span>
+      <span class="cloud cloud-three"></span>
+      <span class="heart h1"></span>
+      <span class="heart h2"></span>
+      <span class="heart h3"></span>
+      <span class="sparkle s1"></span>
+      <span class="sparkle s2"></span>
+      <span class="sparkle s3"></span>
+      <span class="sky-petal p1"></span>
+      <span class="sky-petal p2"></span>
+      <span class="sky-petal p3"></span>
+      <span class="sky-petal p4"></span>
+      <span class="mini-flower mf1"></span>
+      <span class="mini-flower mf2"></span>
+      <span class="mini-flower mf3"></span>
+      <span class="mini-star ms1"></span>
+      <span class="mini-star ms2"></span>
+      <span class="meadow"></span>
+    </div>
+    <main class="app">
+      <section class="hero reveal-scene" aria-labelledby="birthday-title">
+        <div class="floating-petals" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="hero-copy">
+          <p class="eyebrow">A tiny birthday garden across the distance</p>
+          <h1 id="birthday-title">Happy birthday my salvaachi</h1>
+          <p class="intro">
+            We might be far apart today, but this little page is me sending you
+            flowers, cake, music, and all my love through the screen.
+          </p>
+          <div class="hero-actions">
+            <button class="primary-btn" id="music-toggle" type="button">
+              <span class="btn-icon" aria-hidden="true">Play</span>
+              <span>Play music</span>
+            </button>
+            <label class="file-btn" for="music-file">
+              <span class="btn-icon" aria-hidden="true">Pick</span>
+              <span>Choose song</span>
+            </label>
+            <input id="music-file" type="file" accept="audio/*" />
+            <a class="ghost-btn" href="#garden">Choose flowers</a>
+          </div>
+          <p class="song-name" id="song-name">Birthday soundtrack ready.</p>
+        </div>
+
+        <div class="bouquet-preview" aria-label="A cute birthday bouquet">
+          <div class="hero-bouquet" id="hero-bouquet"></div>
+          <div class="hero-wrap" aria-hidden="true">
+            <span class="hero-leaf hero-leaf-back"></span>
+            <span class="hero-leaf hero-leaf-left"></span>
+            <span class="hero-leaf hero-leaf-right"></span>
+            <span class="hero-leaf hero-leaf-front"></span>
+            <span class="hero-leaf-band"></span>
+            <img src="assets/icons/ribbon.svg" alt="" />
+          </div>
+          <p>Made with all my favorite thoughts of you.</p>
+        </div>
+      </section>
+
+      <nav class="story-steps" aria-label="Birthday story steps">
+        <a href="#garden"><span>1</span> Bouquet</a>
+        <a href="#cake"><span>2</span> Cake</a>
+        <a href="#wishes"><span>3</span> Wishes</a>
+        <a href="#distance"><span>4</span> Distance</a>
+        <a href="#memories"><span>5</span> Memories</a>
+        <a href="#coupons"><span>6</span> Coupons</a>
+        <a href="#postcards"><span>7</span> Postcards</a>
+        <a href="#playlist"><span>8</span> Songs</a>
+        <a href="#promises"><span>9</span> Promises</a>
+        <a href="#letters"><span>10</span> Letter</a>
+        <a href="#hug"><span>11</span> Hug</a>
+        <a href="#stars"><span>12</span> Stars</a>
+        <a href="#visit-plan"><span>13</span> Visit</a>
+        <a href="#pocket-home"><span>14</span> Home</a>
+        <a href="#care-package"><span>15</span> Care</a>
+        <a href="#her-details"><span>16</span> Her</a>
+        <a href="#birthdays"><span>17</span> Stars</a>
+        <a href="#photos"><span>18</span> Photos</a>
+        <a href="#moon-note"><span>19</span> Moon</a>
+        <a href="#rituals"><span>20</span> Rituals</a>
+        <a href="#quotes"><span>21</span> Quotes</a>
+        <a href="#doodle-wall"><span>22</span> Doodles</a>
+        <a href="#sky"><span>23</span> Sky</a>
+        <a href="#mihruu-salvuu"><span>24</span> Us</a>
+        <a href="#open-when"><span>25</span> Open</a>
+        <a href="#proud"><span>26</span> Proud</a>
+        <a href="#future-bucket"><span>27</span> Future</a>
+        <a href="#date-dream"><span>28</span> Date</a>
+        <a href="#notice"><span>29</span> Notice</a>
+        <a href="#compliments"><span>30</span> Cute</a>
+        <a href="#care-manual"><span>31</span> Care</a>
+        <a href="#love-jar"><span>32</span> Jar</a>
+        <a href="#secret-letter"><span>33</span> Secret</a>
+        <a href="#queen"><span>34</span> Queen</a>
+        <a href="#doodle-game"><span>35</span> Tap</a>
+        <a href="#royal-decree"><span>36</span> Decree</a>
+        <a href="#dream-lanterns"><span>37</span> Dreams</a>
+        <a href="#mood-selector"><span>38</span> Mood</a>
+        <a href="#hold-hug"><span>39</span> Hold</a>
+        <a href="#my-girl"><span>40</span> Girl</a>
+        <a href="#treasure-map"><span>41</span> Map</a>
+        <a href="#voice-love"><span>42</span> Sound</a>
+        <a href="#forever-contract"><span>43</span> Sign</a>
+        <a href="#tiny-home"><span>44</span> Garden</a>
+        <a href="#art-studio"><span>45</span> Art</a>
+        <a href="#sweet-spicy"><span>46</span> Food</a>
+        <a href="#good-stars"><span>47</span> Stars</a>
+        <a href="#kiss-delivery"><span>48</span> Kiss</a>
+        <a href="#playlist-builder"><span>49</span> Mix</a>
+        <a href="#love-wheel"><span>50</span> Wheel</a>
+        <a href="#crown-chooser"><span>51</span> Crown</a>
+        <a href="#cake-decorator"><span>52</span> Top</a>
+        <a href="#paint-salvuu"><span>53</span> Paint</a>
+        <a href="#gift-box"><span>54</span> Gift</a>
+        <a href="#phone-signal"><span>55</span> Signal</a>
+        <a href="#flower-rain"><span>56</span> Rain</a>
+        <a href="#promise-locks"><span>57</span> Locks</a>
+        <a href="#bookstore-date"><span>58</span> Books</a>
+        <a href="#dream-jars"><span>59</span> Jars</a>
+        <a href="#good-badges"><span>60</span> Badges</a>
+        <a href="#airport-gate"><span>61</span> Gate</a>
+        <a href="#love-library"><span>62</span> Shelf</a>
+        <a href="#aurora-sky"><span>63</span> Aurora</a>
+        <a href="#magic-mirror"><span>64</span> Mirror</a>
+        <a href="#firefly-garden"><span>65</span> Glow</a>
+        <a href="#wish-fountain"><span>66</span> Wish</a>
+        <a href="#shooting-letter"><span>67</span> Star</a>
+        <a href="#sparkle-crown"><span>68</span> Gems</a>
+        <a href="#moon-mailbox"><span>69</span> Moon</a>
+        <a href="#promise-path"><span>70</span> Path</a>
+        <a href="#memory-globe"><span>71</span> Globe</a>
+        <a href="#flip-letter"><span>72</span> Book</a>
+        <a href="#polaroid-lights"><span>73</span> Photos</a>
+        <a href="#planet-orbit"><span>74</span> Orbit</a>
+        <a href="#dream-calendar"><span>75</span> Dates</a>
+        <a href="#architect-dream"><span>76</span> Build</a>
+        <a href="#chest-comfort"><span>77</span> Safe</a>
+        <a href="#architecture-studio"><span>78</span> Desk</a>
+        <a href="#reader-night"><span>79</span> Read</a>
+        <a href="#trophy-wall"><span>80</span> Proud</a>
+        <a href="#rare-soul"><span>81</span> Rare</a>
+        <a href="#future-builder"><span>82</span> Build</a>
+        <a href="#love-weather"><span>83</span> Warm</a>
+        <a href="#love-passport"><span>84</span> Stamp</a>
+        <a href="#time-capsule"><span>85</span> Time</a>
+        <a href="#care-menu"><span>86</span> Care</a>
+        <a href="#final-fireworks"><span>87</span> Boom</a>
+        <a href="#voice-note"><span>88</span> Voice</a>
+        <a href="#notes"><span>89</span> Notes</a>
+        <a href="#ninety-love-map"><span>90</span> Map</a>
+        <a href="#marry-soon"><span>91</span> Marry</a>
+        <a href="#ring-box"><span>92</span> Ring</a>
+        <a href="#vow-garden"><span>93</span> Vows</a>
+        <a href="#forever-home"><span>94</span> Nest</a>
+        <a href="#old-us"><span>95</span> Old</a>
+        <a href="#dream-city"><span>96</span> City</a>
+        <a href="#morning-routine"><span>97</span> AM</a>
+        <a href="#night-routine"><span>98</span> PM</a>
+        <a href="#hundred-reasons"><span>99</span> 100</a>
+        <a href="#final-blessing"><span>100</span> Love</a>
+      </nav>
+
+      <section class="garden-section reveal-scene" id="garden" aria-labelledby="garden-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Your bouquet</p>
+            <h2 id="garden-title">Choose the flowers you want</h2>
+          </div>
+          <p class="selection-count" id="selection-count">0 flowers picked</p>
+        </div>
+
+        <div class="flower-grid" id="flower-grid"></div>
+
+        <div class="bouquet-panel" aria-live="polite">
+          <div class="bouquet-stage" id="bouquet-stage"></div>
+          <div class="bouquet-summary">
+            <h3>Your birthday bouquet</h3>
+            <p id="bouquet-note">Tap any flower above and I'll build your bouquet here.</p>
+            <div class="picked-list" id="picked-list"></div>
+            <div class="wrap-chooser" id="wrap-chooser" hidden>
+              <p>How should I wrap them for her?</p>
+              <div class="wrap-options">
+                <button class="wrap-option is-selected" type="button" data-wrap="blush">
+                  <span></span> Blush cone
+                </button>
+                <button class="wrap-option" type="button" data-wrap="sky">
+                  <span></span> Glass sleeve
+                </button>
+                <button class="wrap-option" type="button" data-wrap="cream">
+                  <span></span> Cream kraft
+                </button>
+                <button class="wrap-option" type="button" data-wrap="lavender">
+                  <span></span> Lavender folds
+                </button>
+              </div>
+            </div>
+            <div class="bouquet-message" id="bouquet-message">
+              Choose flowers and I will turn them into a little long-distance bouquet message.
+            </div>
+            <div class="summary-actions">
+              <button class="primary-btn small" id="surprise-btn" type="button">
+                Open a message
+              </button>
+              <button class="ghost-btn small" id="reset-btn" type="button">
+                Reset bouquet
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cake-section reveal-scene" id="cake" aria-labelledby="cake-title">
+        <div class="cake-copy">
+          <p class="eyebrow">Birthday wish</p>
+          <h2 id="cake-title">A little cake through the screen</h2>
+          <p>
+            First the bouquet, then the cake. Make a wish from your side of the
+            world, and I will be here wishing with you from mine.
+          </p>
+          <button class="primary-btn" id="blow-candles" type="button">
+            <span class="btn-icon" aria-hidden="true">Blow</span>
+            <span>Blow the candles</span>
+          </button>
+          <p class="wish-note" id="wish-note">The candles are waiting for you.</p>
+        </div>
+
+        <div class="cake-card" id="cake-card" aria-label="Birthday cake with animated candles">
+          <div class="cake-confetti" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="wish-sparkles" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <svg class="clean-cake" viewBox="0 0 760 620" role="img" aria-label="Cute Korean cream cake with candles">
+            <defs>
+              <filter id="cake-soft-shadow" x="-20%" y="-20%" width="140%" height="150%">
+                <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#57303d" flood-opacity="0.18" />
+              </filter>
+            </defs>
+            <ellipse class="cc-shadow" cx="380" cy="540" rx="270" ry="36" />
+            <ellipse class="cc-plate" cx="380" cy="510" rx="300" ry="48" />
+            <path class="cc-stand" d="M318 430 H442 L470 510 H290 Z" />
+
+            <g class="cc-cake" filter="url(#cake-soft-shadow)">
+              <g class="cc-bottom">
+                <path class="cc-side" d="M118 310 C118 272 642 272 642 310 V420 C642 470 118 470 118 420 Z" />
+                <ellipse class="cc-top" cx="380" cy="310" rx="262" ry="58" />
+                <path class="cc-cream" d="M146 318 C180 352 220 284 258 322 C296 360 336 285 380 322 C424 360 464 285 502 322 C540 359 584 292 615 320" />
+                <text class="cc-name" x="380" y="400" text-anchor="middle">salvaachi</text>
+                <path class="cc-smile" d="M344 425 C360 442 402 442 418 425" />
+              </g>
+              <g class="cc-top-tier">
+                <path class="cc-side" d="M220 188 C220 158 540 158 540 188 V292 C540 330 220 330 220 292 Z" />
+                <ellipse class="cc-top" cx="380" cy="188" rx="160" ry="44" />
+                <path class="cc-cream" d="M238 198 C266 226 296 172 326 201 C356 230 386 172 416 201 C448 231 496 178 524 200" />
+              </g>
+              <g class="cc-strawberries">
+                <path d="M260 136 C236 154 248 188 280 194 C312 186 314 154 290 136 C280 127 270 127 260 136 Z" />
+                <path d="M468 136 C444 154 456 188 488 194 C520 186 522 154 498 136 C488 127 478 127 468 136 Z" />
+                <path d="M150 284 C126 302 138 336 170 342 C202 334 204 302 180 284 C170 275 160 275 150 284 Z" />
+                <path d="M580 284 C556 302 568 336 600 342 C632 334 634 302 610 284 C600 275 590 275 580 284 Z" />
+              </g>
+              <g class="cc-bow">
+                <path d="M328 438 C270 408 220 430 190 478 C246 492 292 484 340 448 Z" />
+                <path d="M432 438 C490 408 540 430 570 478 C514 492 468 484 420 448 Z" />
+                <circle cx="380" cy="456" r="32" />
+                <path d="M374 486 C358 514 334 536 304 552" />
+                <path d="M386 486 C404 514 430 536 462 552" />
+              </g>
+            </g>
+
+            <g class="cc-candles">
+              <g transform="translate(306 62)">
+                <rect class="cc-candle" x="0" y="64" width="30" height="118" rx="14" />
+                <path class="cc-flame" d="M15 0 C40 34 32 58 15 70 C-3 58 -10 34 15 0 Z" />
+                <path class="cc-smoke" d="M16 12 C-16 -24 46 -36 14 -78" />
+              </g>
+              <g transform="translate(365 42)">
+                <rect class="cc-candle" x="0" y="64" width="30" height="138" rx="14" />
+                <path class="cc-flame" d="M15 0 C40 34 32 58 15 70 C-3 58 -10 34 15 0 Z" />
+                <path class="cc-smoke" d="M16 12 C-16 -24 46 -36 14 -78" />
+              </g>
+              <g transform="translate(424 62)">
+                <rect class="cc-candle" x="0" y="64" width="30" height="118" rx="14" />
+                <path class="cc-flame" d="M15 0 C40 34 32 58 15 70 C-3 58 -10 34 15 0 Z" />
+                <path class="cc-smoke" d="M16 12 C-16 -24 46 -36 14 -78" />
+              </g>
+            </g>
+          </svg>
+          <svg class="birthday-cake-hero" viewBox="0 0 720 620" role="img" aria-label="Large two layer Korean cream cake with ribbon and candles">
+            <ellipse class="bc-shadow" cx="360" cy="552" rx="250" ry="36" />
+            <path class="bc-stand" d="M300 475 H420 L458 552 H262 Z" />
+            <ellipse class="bc-plate" cx="360" cy="532" rx="282" ry="42" />
+
+            <g class="bc-tier bc-bottom">
+              <path class="bc-side" d="M130 290 C130 245 590 245 590 290 V430 C590 484 130 484 130 430 Z" />
+              <ellipse class="bc-top" cx="360" cy="290" rx="230" ry="62" />
+              <path class="bc-drip" d="M154 303 C190 342 219 267 255 309 C290 350 326 266 360 309 C397 350 431 266 466 309 C505 351 535 281 570 306" />
+              <text class="bc-name" x="360" y="396" text-anchor="middle">salvaachi</text>
+              <path class="bc-smile" d="M323 421 C340 439 380 439 398 421" />
+              <circle class="bc-eye" cx="310" cy="395" r="8" />
+              <circle class="bc-eye" cx="410" cy="395" r="8" />
+            </g>
+
+            <g class="bc-tier bc-top-tier">
+              <path class="bc-side" d="M210 185 C210 150 510 150 510 185 V285 C510 326 210 326 210 285 Z" />
+              <ellipse class="bc-top" cx="360" cy="185" rx="150" ry="44" />
+              <path class="bc-drip" d="M228 196 C254 227 281 170 310 199 C338 227 365 173 393 199 C424 228 453 177 492 197" />
+            </g>
+
+            <g class="bc-strawberries">
+              <path d="M258 133 C234 153 247 190 278 195 C310 187 313 151 288 133 C278 124 267 124 258 133 Z" />
+              <path d="M433 133 C409 153 422 190 453 195 C485 187 488 151 463 133 C453 124 442 124 433 133 Z" />
+              <path d="M170 264 C146 284 159 321 190 326 C222 318 225 282 200 264 C190 255 179 255 170 264 Z" />
+              <path d="M520 264 C496 284 509 321 540 326 C572 318 575 282 550 264 C540 255 529 255 520 264 Z" />
+            </g>
+
+            <g class="bc-ribbon">
+              <path d="M312 449 C246 405 194 435 166 486 C228 505 279 494 324 458 Z" />
+              <path d="M408 449 C474 405 526 435 554 486 C492 505 441 494 396 458 Z" />
+              <circle cx="360" cy="462" r="34" />
+              <path d="M356 496 C342 525 318 546 288 560" />
+              <path d="M366 496 C382 526 407 546 438 560" />
+            </g>
+
+            <g class="bc-candles">
+              <g class="bc-candle" transform="translate(292 70)">
+                <rect x="0" y="58" width="28" height="94" rx="13" />
+                <path class="bc-flame" d="M14 0 C38 34 29 56 14 66 C-2 56 -10 34 14 0 Z" />
+                <path class="bc-smoke" d="M16 12 C-14 -22 44 -34 14 -72" />
+              </g>
+              <g class="bc-candle" transform="translate(346 45)">
+                <rect x="0" y="58" width="28" height="120" rx="13" />
+                <path class="bc-flame" d="M14 0 C38 34 29 56 14 66 C-2 56 -10 34 14 0 Z" />
+                <path class="bc-smoke" d="M16 12 C-14 -22 44 -34 14 -72" />
+              </g>
+              <g class="bc-candle" transform="translate(400 70)">
+                <rect x="0" y="58" width="28" height="94" rx="13" />
+                <path class="bc-flame" d="M14 0 C38 34 29 56 14 66 C-2 56 -10 34 14 0 Z" />
+                <path class="bc-smoke" d="M16 12 C-14 -22 44 -34 14 -72" />
+              </g>
+            </g>
+          </svg>
+          <div class="k-cake-scene" aria-hidden="true">
+            <div class="k-candles">
+              <span class="k-candle"><i></i><b></b></span>
+              <span class="k-candle tall"><i></i><b></b></span>
+              <span class="k-candle"><i></i><b></b></span>
+            </div>
+            <div class="k-tier k-tier-top">
+              <span class="k-cream"></span>
+              <span class="k-strawberry st1"></span>
+              <span class="k-strawberry st2"></span>
+              <span class="k-piping"></span>
+            </div>
+            <div class="k-tier k-tier-bottom">
+              <span class="k-cream"></span>
+              <span class="k-strawberry st3"></span>
+              <span class="k-strawberry st4"></span>
+              <span class="k-writing">salvaachi</span>
+              <span class="k-face"></span>
+              <span class="k-bow"><i></i></span>
+            </div>
+            <div class="k-stand"></div>
+            <div class="k-plate"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="wish-section reveal-scene" id="wishes" aria-labelledby="wish-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Birthday wishes</p>
+            <h2 id="wish-title">Pick a tiny wish</h2>
+          </div>
+        </div>
+        <div class="wish-grid">
+          <button class="wish-card" type="button">A slow morning together</button>
+          <button class="wish-card" type="button">A flower date soon</button>
+          <button class="wish-card" type="button">A cozy movie night</button>
+          <button class="wish-card" type="button">A handwritten letter</button>
+        </div>
+        <p class="wish-result" id="wish-result">Tap one and I will keep it as a promise.</p>
+      </section>
+
+      <section class="distance-section reveal-scene" id="distance" aria-labelledby="distance-title">
+        <div class="distance-copy">
+          <p class="eyebrow">Same sky</p>
+          <h2 id="distance-title">Two places, one little us</h2>
+          <p>
+            The map can stretch as much as it wants. I still find you in songs,
+            messages, late-night calls, and every tiny thing I want to tell you.
+          </p>
+        </div>
+        <div class="distance-illustration" aria-hidden="true">
+          <span class="phone-card left-phone">Me</span>
+          <span class="phone-card right-phone">You</span>
+          <span class="signal-line"></span>
+          <span class="moon"></span>
+          <span class="tiny-plane"></span>
+        </div>
+      </section>
+
+      <section class="date-plan-section reveal-scene" id="date-plan" aria-labelledby="date-plan-title">
+        <p class="eyebrow">Next virtual date</p>
+        <h2 id="date-plan-title">Pick our birthday plan</h2>
+        <div class="date-plan-grid">
+          <button class="date-plan-card" type="button"><span class="section-illo movie-illo"></span>Movie call</button>
+          <button class="date-plan-card" type="button"><span class="section-illo dessert-illo"></span>Dessert together</button>
+          <button class="date-plan-card" type="button"><span class="section-illo letter-illo"></span>Open letters</button>
+        </div>
+        <p class="date-plan-result" id="date-plan-result">Choose one and it becomes our plan.</p>
+      </section>
+
+      <section class="reasons-section reveal-scene" aria-labelledby="reasons-title">
+        <p class="eyebrow">A few reasons</p>
+        <h2 id="reasons-title">Things I love about you</h2>
+        <div class="reason-strip">
+          <span>Your smile</span>
+          <span>Your heart</span>
+          <span>Your laugh</span>
+          <span>Your softness</span>
+          <span>Your chaos</span>
+          <span>Your little ways</span>
+        </div>
+      </section>
+
+      <section class="memory-section reveal-scene" id="memories" aria-labelledby="memory-title">
+        <div>
+          <p class="eyebrow">Tiny gallery</p>
+          <h2 id="memory-title">A few little moments</h2>
+        </div>
+        <div class="memory-grid">
+          <article><span>01</span><p>The first moment I knew you were special.</p></article>
+          <article><span>02</span><p>The laugh I keep replaying in my head.</p></article>
+          <article><span>03</span><p>The quiet days that still feel like magic.</p></article>
+        </div>
+      </section>
+
+      <section class="care-section reveal-scene" id="care" aria-labelledby="care-title">
+        <div>
+          <p class="eyebrow">Care package</p>
+          <h2 id="care-title">Things I would send if I could</h2>
+        </div>
+        <div class="care-grid">
+          <article><span class="section-illo hug-illo"></span><p>A hug that lasts too long</p></article>
+          <article><span class="section-illo snack-illo"></span><p>Your favorite snacks</p></article>
+          <article><span class="section-illo blanket-illo"></span><p>A soft blanket for late calls</p></article>
+        </div>
+      </section>
+
+      <section class="postcard-section reveal-scene" id="postcards" aria-labelledby="postcard-title">
+        <div>
+          <p class="eyebrow">Postcards I wish I could send</p>
+          <h2 id="postcard-title">Tiny mail from my heart</h2>
+        </div>
+        <div class="postcard-grid">
+          <article><span class="section-illo stamp-illo"></span><p>One for the morning you wake up smiling.</p></article>
+          <article><span class="section-illo map-illo"></span><p>One for every place between you and me.</p></article>
+          <article><span class="section-illo kiss-illo"></span><p>One sealed with the biggest virtual kiss.</p></article>
+        </div>
+      </section>
+
+      <section class="coupon-section reveal-scene" id="coupons" aria-labelledby="coupon-title">
+        <div>
+          <p class="eyebrow">Birthday coupons</p>
+          <h2 id="coupon-title">Redeem whenever you want</h2>
+        </div>
+        <div class="coupon-grid">
+          <button class="coupon-card" type="button">One flower date</button>
+          <button class="coupon-card" type="button">One dessert run</button>
+          <button class="coupon-card" type="button">One no-phone cuddle movie</button>
+        </div>
+        <p class="coupon-result" id="coupon-result">Pick a coupon and I will owe you one.</p>
+      </section>
+
+      <section class="playlist-section reveal-scene" id="playlist" aria-labelledby="playlist-title">
+        <div>
+          <p class="eyebrow">Little soundtrack</p>
+          <h2 id="playlist-title">Songs for the day</h2>
+        </div>
+        <div class="playlist-list">
+          <article><span>01</span><p>For getting ready</p></article>
+          <article><span>02</span><p>For choosing flowers</p></article>
+          <article><span>03</span><p>For the candle wish</p></article>
+        </div>
+      </section>
+
+      <section class="promise-section reveal-scene" id="promises" aria-labelledby="promise-title">
+        <p class="eyebrow">Soft promises</p>
+        <h2 id="promise-title">Things I want to give you more of</h2>
+        <div class="promise-grid">
+          <span>More patience</span>
+          <span>More silly moments</span>
+          <span>More flowers</span>
+          <span>More soft days</span>
+        </div>
+      </section>
+
+      <section class="countdown-section reveal-scene" id="countdown" aria-labelledby="countdown-title">
+        <div>
+          <p class="eyebrow">Until next time</p>
+          <h2 id="countdown-title">Every day closer</h2>
+          <p>
+            I do not need the distance to disappear to love you properly. But I
+            am still counting every soft little step toward seeing you again.
+          </p>
+        </div>
+        <div class="countdown-tiles" aria-hidden="true">
+          <span>Calls</span>
+          <span>Texts</span>
+          <span>Plans</span>
+          <span>Us</span>
+        </div>
+      </section>
+
+      <section class="letter-section reveal-scene" id="letters" aria-labelledby="letter-title">
+        <div class="letter-copy">
+          <p class="eyebrow">Open when you miss me</p>
+          <h2 id="letter-title">A tiny letter from far away</h2>
+          <p>
+            Tap the envelope whenever the distance feels loud. It will open like
+            a little pocket of me reaching back.
+          </p>
+        </div>
+        <div class="envelope-card">
+          <button class="envelope" id="open-letter" type="button" aria-label="Open the letter">
+            <span class="envelope-flap"></span>
+            <span class="envelope-heart">
+              <svg viewBox="0 0 80 72" aria-hidden="true">
+                <path d="M40 66 C18 47 6 36 6 21 C6 10 14 3 25 3 C32 3 37 7 40 13 C43 7 48 3 55 3 C66 3 74 10 74 21 C74 36 62 47 40 66 Z" />
+              </svg>
+            </span>
+          </button>
+          <article class="letter-note" id="letter-paper">
+            <p class="eyebrow">For when the distance is loud</p>
+            <h3>My salvaachi,</h3>
+            <p>
+              I am proud of you, I miss you, and I love you more than the miles
+              between us. If the night ever feels too quiet, imagine me on the
+              other side of it, choosing you again.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="hug-section reveal-scene" id="hug" aria-labelledby="hug-title">
+        <div>
+          <p class="eyebrow">Virtual hug machine</p>
+          <h2 id="hug-title">Charge a hug for salvaachi</h2>
+        </div>
+        <div class="hug-machine">
+          <div class="hug-meter"><span id="hug-fill"></span></div>
+          <button class="primary-btn" id="hug-button" type="button">Send hug</button>
+          <p id="hug-note">Hug level: waiting for you.</p>
+        </div>
+      </section>
+
+      <section class="constellation-section reveal-scene" id="stars" aria-labelledby="stars-title">
+        <div class="constellation-copy">
+          <p class="eyebrow">Her galaxy</p>
+          <h2 id="stars-title">A whole universe inside Salvuu</h2>
+          <p>
+            Tap the planets and stars. Every little world is something I love
+            about you: music, art, kindness, how so damn beautiful, pretty, and gorgeous you are, how you are everything I need in a girl, and the future I want to
+            stand beside you for.
+          </p>
+        </div>
+        <div class="galaxy-card">
+          <canvas id="love-sky" width="900" height="560" aria-label="Interactive galaxy sky"></canvas>
+          <button class="galaxy-body planet guitar-planet" type="button" style="--x:18%;--y:28%" data-galaxy="Guitar planet: I love that you play guitar. I hope every song you learn keeps making your heart happy.">guitar</button>
+          <button class="galaxy-body planet ocarina-planet" type="button" style="--x:70%;--y:22%" data-galaxy="Ocarina moon: even the softest little instrument feels magical when it belongs to you.">ocarina</button>
+          <button class="galaxy-body star art-star" type="button" style="--x:38%;--y:18%" data-galaxy="Drawing star: you draw so beautifully. Your hands know how to turn feelings into art.">draw</button>
+          <button class="galaxy-body planet paint-planet" type="button" style="--x:82%;--y:58%" data-galaxy="Painting planet: you paint so well, Salvuu. You are art and artist in one whole beautiful package.">paint</button>
+          <button class="galaxy-body star kindness-star" type="button" style="--x:28%;--y:66%" data-galaxy="Kindness star: your kindness is one of the prettiest things about you, and you are so damn beautiful, pretty, gorgeous, and everything I need in a girl. It makes me want to care for you even better.">kind</button>
+          <button class="galaxy-body planet food-planet" type="button" style="--x:54%;--y:74%" data-galaxy="Sweet and spicy planet: sweets for your cute side, spicy food for your fire. Both are very Salvuu.">sweet + spicy</button>
+          <button class="galaxy-body dream-comet" type="button" style="--x:54%;--y:42%" data-galaxy="Dream comet: I hope you achieve every dream you have, with Mihruu by your side cheering, helping, and loving you through it all.">dreams</button>
+          <p class="galaxy-message" id="galaxy-message">Pick a planet or star in Salvuu's galaxy.</p>
+        </div>
+      </section>
+
+      <section class="visit-plan-section reveal-scene" id="visit-plan" aria-labelledby="visit-title">
+        <div>
+          <p class="eyebrow">Next time checklist</p>
+          <h2 id="visit-title">When distance finally takes a break</h2>
+        </div>
+        <div class="visit-grid">
+          <article><span class="visit-icon calendar-icon"></span><h3>Pick the day</h3><p>Circle it like it is a tiny holiday for us.</p></article>
+          <article><span class="visit-icon cake-icon"></span><h3>Share dessert</h3><p>One spoon, one laugh, no screen between us.</p></article>
+          <article><span class="visit-icon flower-icon-open"></span><h3>Bring flowers</h3><p>The real bouquet, not just the digital one.</p></article>
+        </div>
+      </section>
+
+      <section class="pocket-home-section reveal-scene" id="pocket-home" aria-labelledby="pocket-home-title">
+        <div class="pocket-home-copy">
+          <p class="eyebrow">Home in your pocket</p>
+          <h2 id="pocket-home-title">For the days she opens this on her phone</h2>
+          <p>
+            This website is a pocket-sized version of me saying: I am here, I
+            miss you, and you are loved even from far away.
+          </p>
+        </div>
+        <div class="pocket-phone" aria-hidden="true">
+          <img src="assets/icons/phone.svg" alt="" />
+          <span>salvaachi</span>
+        </div>
+      </section>
+
+      <section class="care-package-section reveal-scene" id="care-package" aria-labelledby="care-package-title">
+        <div>
+          <p class="eyebrow">Tiny care package</p>
+          <h2 id="care-package-title">Little things I would send across the miles</h2>
+        </div>
+        <div class="care-package-grid">
+          <article>
+            <img src="assets/icons/teddy.svg" alt="" />
+            <h3>One soft hug</h3>
+            <p>For when the day feels too long and I cannot be there fast enough.</p>
+          </article>
+          <article>
+            <img src="assets/icons/memo.svg" alt="" />
+            <h3>One tiny note</h3>
+            <p>Just a little reminder that you are loved on ordinary days too.</p>
+          </article>
+          <article>
+            <img src="assets/icons/music.svg" alt="" />
+            <h3>One song</h3>
+            <p>Press play and pretend the same melody is sitting between us.</p>
+          </article>
+          <article>
+            <img src="assets/icons/blanket.svg" alt="" />
+            <h3>One warm night</h3>
+            <p>For moon-looking, sleepy texting, and feeling close from far away.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="her-details-section reveal-scene" id="her-details" aria-labelledby="her-details-title">
+        <div class="her-details-copy">
+          <p class="eyebrow">Made more like her</p>
+          <h2 id="her-details-title">Burgundy, favorite flowers, and February 13</h2>
+          <p>
+            Four years of us, with February 13 tucked inside the page like a
+            tiny anniversary charm. Her bouquet belongs in burgundy light, with
+            tulips, roses, and jasmine leading everything.
+          </p>
+        </div>
+        <div class="favorite-trio" aria-label="Her favorite flowers">
+          <article>
+            <img src="assets/flowers/tulip.svg" alt="" />
+            <h3>Tulips</h3>
+            <p>Sweet, bright, and soft.</p>
+          </article>
+          <article>
+            <img src="assets/flowers/rose.svg" alt="" />
+            <h3>Roses</h3>
+            <p>Romantic in the obvious way.</p>
+          </article>
+          <article>
+            <img src="assets/flowers/jasmine.svg" alt="" />
+            <h3>Jasmine</h3>
+            <p>Small, delicate, precious.</p>
+          </article>
+        </div>
+        <div class="anniversary-ribbon" aria-hidden="true">
+          <span>Feb 13</span>
+          <span>4th year</span>
+          <span>burgundy love</span>
+        </div>
+      </section>
+
+      <section class="birthday-stars-section reveal-scene" id="birthdays" aria-labelledby="birthday-stars-title">
+        <div>
+          <p class="eyebrow">Our birthday stars</p>
+          <h2 id="birthday-stars-title">May 28 and October 20</h2>
+        </div>
+        <div class="zodiac-grid">
+          <article class="zodiac-card">
+            <span class="zodiac-illo gemini-illo"></span>
+            <p class="date-label">Her birthday</p>
+            <h3>May 28</h3>
+            <p>Gemini energy: bright, curious, funny, and impossible not to miss.</p>
+          </article>
+          <article class="zodiac-card">
+            <span class="zodiac-illo libra-illo"></span>
+            <p class="date-label">Your birthday</p>
+            <h3>October 20</h3>
+            <p>Libra energy: romantic, soft-hearted, and always trying to make love feel beautiful.</p>
+          </article>
+          <article class="zodiac-card wide">
+            <span class="zodiac-illo orbit-illo"></span>
+            <p class="date-label">Us since February 13</p>
+            <h3>Different months, same little universe</h3>
+            <p>Her spring birthday, your autumn birthday, and February 13 in the middle like the day the universe started keeping score for us.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="moon-note-section reveal-scene" id="moon-note" aria-labelledby="moon-note-title">
+        <div class="moon-note-copy">
+          <p class="eyebrow">When you need me</p>
+          <h2 id="moon-note-title">Look over the moon</h2>
+          <p>
+            The moon is lovely, but it is lovelier when I remember you might be
+            under it too. If you miss me, look up. I will meet you there in my
+            thoughts.
+          </p>
+        </div>
+        <div class="moon-postcard" aria-hidden="true">
+          <span class="moon-postcard-moon"></span>
+          <span class="moon-postcard-cloud one"></span>
+          <span class="moon-postcard-cloud two"></span>
+          <span class="moon-postcard-text">the moon is lovely tonight</span>
+        </div>
+      </section>
+
+      <section class="ritual-section reveal-scene" id="rituals" aria-labelledby="ritual-title">
+        <p class="eyebrow">Our tiny rituals</p>
+        <h2 id="ritual-title">Ways we stay close</h2>
+        <div class="ritual-grid">
+          <article><span class="ritual-illo call-ritual"></span><h3>Late calls</h3><p>Even sleepy silence counts as time together.</p></article>
+          <article><span class="ritual-illo photo-ritual"></span><h3>Random pictures</h3><p>Send me little pieces of your day. I keep them.</p></article>
+          <article><span class="ritual-illo moon-ritual"></span><h3>Same moon</h3><p>One sky, two places, one little us.</p></article>
+          <article><span class="ritual-illo future-ritual"></span><h3>Future plans</h3><p>Every plan is a small bridge toward you.</p></article>
+        </div>
+      </section>
+
+      <section class="quote-section reveal-scene" id="quotes" aria-labelledby="quote-title">
+        <div>
+          <p class="eyebrow">Little quotes for the distance</p>
+          <h2 id="quote-title">When words need somewhere cute to sit</h2>
+        </div>
+        <div class="quote-wall">
+          <article><span class="quote-doodle moon-quote"></span><p>"The moon is lovely tonight, and so are you."</p></article>
+          <article><span class="quote-doodle call-quote"></span><p>"I miss you in all the quiet places."</p></article>
+          <article><span class="quote-doodle flower-quote"></span><p>"One day the screen will be replaced by your hand."</p></article>
+          <article><span class="quote-doodle plane-quote"></span><p>"Every mile is just a road love already knows."</p></article>
+        </div>
+      </section>
+
+      <section class="doodle-wall-section reveal-scene" id="doodle-wall" aria-labelledby="doodle-title">
+        <div class="doodle-copy">
+          <p class="eyebrow">A tiny picture wall</p>
+          <h2 id="doodle-title">Open-source inspired doodles, made for us</h2>
+          <p>
+            A soft little wall of moon, mail, flowers, calls, and travel pieces
+            for the long-distance version of us.
+          </p>
+        </div>
+        <div class="doodle-board" aria-hidden="true">
+          <span class="doodle-sticker moon-sticker"></span>
+          <span class="doodle-sticker mail-sticker"></span>
+          <span class="doodle-sticker flower-sticker"></span>
+          <span class="doodle-sticker call-sticker"></span>
+          <span class="doodle-sticker plane-sticker"></span>
+          <span class="doodle-string"></span>
+        </div>
+      </section>
+
+      <section class="photo-story-section reveal-scene" id="photos" aria-labelledby="photo-story-title">
+        <div>
+          <p class="eyebrow">Future notes</p>
+          <h2 id="photo-story-title">Little pictures of the future I want with you</h2>
+          <p class="photo-helper">Three tiny scenes for the day distance finally gets tired and lets us be together.</p>
+        </div>
+        <div class="photo-story-grid">
+          <article class="photo-card future-note-card">
+            <figure class="photo-frame future-photo tall-photo">
+              <img src="assets/photos/future-car-flowers.png" alt="Illustration of us by a car with flowers in the countryside" loading="lazy" decoding="async" />
+            </figure>
+            <div class="future-note-copy">
+              <p class="date-label">Future note 01</p>
+              <h3>The first bouquet I bring myself</h3>
+              <p>
+                One day it will not be a digital bouquet. It will be me, standing
+                there with tulips, roses, jasmine, and the biggest smile because
+                I finally get to hand them to you.
+              </p>
+            </div>
+          </article>
+          <article class="photo-card future-note-card wide-photo-card">
+            <figure class="photo-frame future-photo wide-photo">
+              <img src="assets/photos/future-field-car.png" alt="Illustration of us standing by a car in a flower field" loading="lazy" decoding="async" />
+            </figure>
+            <div class="future-note-copy">
+              <p class="date-label">Future note 02</p>
+              <h3>A small road, a quiet field, and us</h3>
+              <p>
+                I want soft days like this with you. No rushing, no screen
+                between us, just a little road, flowers everywhere, and us
+                choosing where to go next.
+              </p>
+            </div>
+          </article>
+          <article class="photo-card future-note-card">
+            <figure class="photo-frame future-photo tall-photo">
+              <img src="assets/photos/future-hug-sketch.png" alt="Sketch illustration of us smiling and hugging" loading="lazy" decoding="async" />
+            </figure>
+            <div class="future-note-copy">
+              <p class="date-label">Future note 03</p>
+              <h3>The hug I keep saving for you</h3>
+              <p>
+                Every missed hug is not lost. I am saving them all for the day I
+                can hold you properly and make the distance feel like something
+                we already survived.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="sky-section reveal-scene" id="sky" aria-labelledby="sky-title">
+        <div class="sky-copy">
+          <p class="eyebrow">Same moon club</p>
+          <h2 id="sky-title">When you miss me, look up</h2>
+          <p>
+            Somewhere under the same sky, I am probably missing you too. That is
+            our tiny secret meeting place.
+          </p>
+        </div>
+        <div class="sky-window" aria-hidden="true">
+          <span class="big-moon"></span>
+          <span class="star-dot a"></span>
+          <span class="star-dot b"></span>
+          <span class="star-dot c"></span>
+          <span class="window-phone"></span>
+        </div>
+      </section>
+
+      <section class="mihruu-salvuu-section reveal-scene" id="mihruu-salvuu" aria-labelledby="mihruu-salvuu-title">
+        <div class="us-letter">
+          <p class="eyebrow">Mihruu and Salvuu</p>
+          <h2 id="mihruu-salvuu-title">All or nothing, with you</h2>
+          <p>
+            Salvuu, I am so proud of you. I hope you know that Mihruu is here
+            for everything: the easy days, the hard days, the quiet days, the
+            days you need to be held gently, and the days you just need someone
+            to remind you how loved you are.
+          </p>
+          <p>
+            You are sweet, cute, gorgeous, pretty, hot, amazing, and everything
+            I could ever want in a girl. I want to cherish you, take care of you
+            so well, grow old with you, and keep choosing you forever. Whatever
+            we do, we do it together.
+          </p>
+        </div>
+        <div class="us-promise-grid" aria-label="Promises from Mihruu to Salvuu">
+          <article>
+            <span>01</span>
+            <h3>I am proud of you</h3>
+            <p>For how much you carry, how much you try, and how beautifully you keep going.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>I will take care of you</h3>
+            <p>Softly, patiently, properly, in the little ways and the big ways.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>I am here for everything</h3>
+            <p>Every call, every worry, every silly thought, every dream, every version of you.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>Together forever</h3>
+            <p>Not just for birthdays. For ordinary mornings, old age, and every tiny life in between.</p>
+          </article>
+        </div>
+        <div class="us-name-lockup" aria-hidden="true">
+          <span>Mihruu</span>
+          <b>+</b>
+          <span>Salvuu</span>
+        </div>
+        <div class="nickname-wall" aria-label="Names Mihruu calls Salvuu">
+          <div class="nickname-copy">
+            <p class="eyebrow">Names I call you</p>
+            <h3>Every little name means I love you</h3>
+          </div>
+          <div class="nickname-stickers">
+            <span>salvaachi</span>
+            <span>salvuu</span>
+            <span>salvu kutti</span>
+            <span>salva didi</span>
+            <span>dummy</span>
+            <span>salvaa kunjammayi</span>
+            <span>mommy</span>
+            <span>aluva thatha</span>
+            <span>chundari</span>
+            <span>buu buu</span>
+            <span>my good girl</span>
+            <span>salva chi chi</span>
+            <span>potato princess</span>
+            <span>my queen</span>
+            <span>my everything</span>
+            <span>my highness</span>
+            <span>my princess</span>
+            <span>and many more</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="open-when-section reveal-scene extra-love-section" id="open-when" aria-labelledby="open-when-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Open when</p>
+            <h2 id="open-when-title">Tiny messages for different days</h2>
+          </div>
+        </div>
+        <div class="open-when-grid">
+          <button class="open-when-card" type="button" data-message="I am right here, Salvuu. Even if I cannot hold you this second, Mihruu is loving you from his side of the world.">
+            <span>Open when</span><b>you miss me</b><small>tap me</small>
+          </button>
+          <button class="open-when-card" type="button" data-message="Rest, my good girl. You do not have to be strong every second. I am proud of you, even on the days you feel tired.">
+            <span>Open when</span><b>you feel tired</b><small>tap me</small>
+          </button>
+          <button class="open-when-card" type="button" data-message="You are gorgeous, smart, sweet, and more capable than you think. I believe in you completely.">
+            <span>Open when</span><b>you need confidence</b><small>tap me</small>
+          </button>
+          <button class="open-when-card" type="button" data-message="Smile for me, potato princess. Somewhere, Mihruu is probably smiling just because you exist.">
+            <span>Open when</span><b>you need a smile</b><small>tap me</small>
+          </button>
+        </div>
+        <p class="open-when-result" id="open-when-result">Pick a card and a little Mihruu message will open here.</p>
+      </section>
+
+      <section class="proud-section reveal-scene extra-love-section" id="proud" aria-labelledby="proud-title">
+        <p class="eyebrow">Reasons I am proud of you</p>
+        <h2 id="proud-title">I notice how beautifully you keep going</h2>
+        <div class="reason-grid">
+          <article><span>01</span><p>You try even when things feel heavy.</p></article>
+          <article><span>02</span><p>You are soft without being weak.</p></article>
+          <article><span>03</span><p>You make love feel gentle, safe, and real.</p></article>
+          <article><span>04</span><p>You are growing into an even more amazing version of yourself.</p></article>
+          <article><span>05</span><p>You care deeply, and that makes you rare.</p></article>
+          <article><span>06</span><p>You are my queen, and I am proud to love you.</p></article>
+        </div>
+      </section>
+
+      <section class="future-bucket-section reveal-scene extra-love-section" id="future-bucket" aria-labelledby="future-bucket-title">
+        <div>
+          <p class="eyebrow">Our future bucket list</p>
+          <h2 id="future-bucket-title">Things Mihruu wants to do with Salvuu</h2>
+        </div>
+        <div class="bucket-list">
+          <article>First real airport hug</article>
+          <article>Flower date with tulips, roses, and jasmine</article>
+          <article>Late-night drive with our songs playing</article>
+          <article>Matching photos and silly poses</article>
+          <article>Cafe date with dessert for her</article>
+          <article>Cooking together, even if we make a mess</article>
+          <article>Same moon walks without the distance</article>
+          <article>Growing old and still choosing each other</article>
+        </div>
+      </section>
+
+      <section class="date-dream-section reveal-scene extra-love-section" id="date-dream" aria-labelledby="date-dream-title">
+        <p class="eyebrow">Pick a future date</p>
+        <h2 id="date-dream-title">Choose what Mihruu should plan first</h2>
+        <div class="date-dream-board">
+          <button class="date-dream-card" type="button" data-date="Flower date saved: tulips, roses, jasmine, burgundy ribbon, and Mihruu carrying everything.">
+            <span class="dream-illo flower-date"></span>
+            <b>Flower date</b>
+          </button>
+          <button class="date-dream-card" type="button" data-date="Cafe date saved: dessert for Salvuu, a warm drink, and no rushing at all.">
+            <span class="dream-illo cafe-date"></span>
+            <b>Cafe date</b>
+          </button>
+          <button class="date-dream-card" type="button" data-date="Moon walk saved: one sky, two hands, and Mihruu refusing to let go.">
+            <span class="dream-illo moon-date"></span>
+            <b>Moon walk</b>
+          </button>
+          <button class="date-dream-card" type="button" data-date="Road trip saved: our songs, silly photos, and Salvuu choosing the snacks.">
+            <span class="dream-illo road-date"></span>
+            <b>Road trip</b>
+          </button>
+        </div>
+        <p class="date-dream-result" id="date-dream-result">Tap a future date and I will save the plan here.</p>
+      </section>
+
+      <section class="notice-section reveal-scene extra-love-section" id="notice" aria-labelledby="notice-title">
+        <p class="eyebrow">Things I notice about you</p>
+        <h2 id="notice-title">All the little details I keep loving</h2>
+        <div class="notice-cloud">
+          <span>your smile</span>
+          <span>your sweetness</span>
+          <span>your voice</span>
+          <span>your cute moods</span>
+          <span>your heart</span>
+          <span>your beauty</span>
+          <span>your effort</span>
+          <span>your softness</span>
+          <span>your gorgeous face</span>
+          <span>your silly side</span>
+        </div>
+      </section>
+
+      <section class="compliment-section reveal-scene extra-love-section" id="compliments" aria-labelledby="compliment-title">
+        <p class="eyebrow">Compliment machine</p>
+        <h2 id="compliment-title">Press for a Salvuu compliment</h2>
+        <div class="compliment-machine">
+          <div class="compliment-orbit" aria-hidden="true">
+            <span></span><span></span><span></span><span></span>
+          </div>
+          <p id="compliment-output">You are my sweet, gorgeous, burgundy princess.</p>
+          <button class="primary-btn" id="compliment-button" type="button">Give me another</button>
+        </div>
+      </section>
+
+      <section class="care-manual-section reveal-scene extra-love-section" id="care-manual" aria-labelledby="care-manual-title">
+        <p class="eyebrow">Mihruu's care manual for Salvuu</p>
+        <h2 id="care-manual-title">How to take care of my girl</h2>
+        <div class="manual-grid">
+          <article><h3>When sad</h3><p>Give soft words, patience, and remind her she is not alone.</p></article>
+          <article><h3>When tired</h3><p>Let her rest, protect her peace, and love her gently.</p></article>
+          <article><h3>When happy</h3><p>Celebrate her loudly, because her joy is precious.</p></article>
+          <article><h3>Always</h3><p>Cherish her, choose her, and take care of her heart properly.</p></article>
+        </div>
+      </section>
+
+      <section class="love-jar-section reveal-scene extra-love-section" id="love-jar" aria-labelledby="love-jar-title">
+        <p class="eyebrow">Love note jar</p>
+        <h2 id="love-jar-title">Pull a tiny note from Mihruu</h2>
+        <div class="love-jar-wrap">
+          <button class="love-jar" id="love-jar-button" type="button" aria-label="Pull a love note">
+            <span class="jar-lid"></span>
+            <span class="jar-glass"></span>
+            <span class="jar-heart one"></span>
+            <span class="jar-heart two"></span>
+            <span class="jar-heart three"></span>
+          </button>
+          <p class="love-jar-note" id="love-jar-note">Tap the jar for a tiny note.</p>
+        </div>
+      </section>
+
+      <section class="secret-letter-section reveal-scene extra-love-section" id="secret-letter" aria-labelledby="secret-letter-title">
+        <div>
+          <p class="eyebrow">For Salvuu only</p>
+          <h2 id="secret-letter-title">A secret final letter</h2>
+        </div>
+        <button class="secret-letter-btn" id="secret-letter-btn" type="button">Unlock Mihruu's letter</button>
+        <article class="secret-letter-paper" id="secret-letter-paper" hidden>
+          <h3>My Salvuu,</h3>
+          <p>
+            It is all or nothing with you. I want the small days, the big days,
+            the far days, the close days, the silly days, and the old days. I
+            want to cherish you forever and take care of you in ways that make
+            you feel safe, wanted, pretty, and deeply loved.
+          </p>
+        </article>
+      </section>
+
+      <section class="queen-section reveal-scene extra-love-section" id="queen" aria-labelledby="queen-title">
+        <p class="eyebrow">Birthday crown</p>
+        <h2 id="queen-title">Today the kingdom belongs to Salvuu</h2>
+        <div class="queen-card">
+          <span class="crown-illo" aria-hidden="true"></span>
+          <p>My queen, my highness, my princess, my everything. Burgundy suits you because you make love feel royal.</p>
+        </div>
+      </section>
+
+      <section class="doodle-game-section reveal-scene extra-love-section" id="doodle-game" aria-labelledby="doodle-game-title">
+        <p class="eyebrow">Tiny tap doodles</p>
+        <h2 id="doodle-game-title">Tap the board and make love notes appear</h2>
+        <div class="tap-doodle-board" id="tap-doodle-board" role="button" tabindex="0" aria-label="Tap to add cute doodles">
+          <span class="tap-hint">tap anywhere</span>
+        </div>
+      </section>
+
+      <section class="royal-decree-section reveal-scene extra-love-section playful-section" id="royal-decree" aria-labelledby="royal-decree-title">
+        <p class="eyebrow">Today's royal decree</p>
+        <h2 id="royal-decree-title">The queen gets spoiled by law</h2>
+        <div class="decree-card">
+          <span class="crown-illo" aria-hidden="true"></span>
+          <p id="decree-output">By order of Mihruu: Salvuu must be adored today.</p>
+          <button class="primary-btn" id="decree-button" type="button">New decree</button>
+        </div>
+      </section>
+
+      <section class="dream-lantern-section reveal-scene extra-love-section playful-section" id="dream-lanterns" aria-labelledby="dream-lantern-title">
+        <p class="eyebrow">Dream lanterns</p>
+        <h2 id="dream-lantern-title">Tap a lantern and send a wish upward</h2>
+        <div class="dream-lantern-board" id="dream-lantern-board">
+          <button type="button" class="dream-lantern" style="--x:18%;--y:54%" data-dream="Home lantern: a soft little place where Salvuu always feels safe."><span>home</span></button>
+          <button type="button" class="dream-lantern" style="--x:36%;--y:30%" data-dream="Flower lantern: tulips, roses, jasmine, and Mihruu bringing them himself."><span>flowers</span></button>
+          <button type="button" class="dream-lantern" style="--x:56%;--y:48%" data-dream="Travel lantern: trips where the distance finally becomes a story we survived."><span>trips</span></button>
+          <button type="button" class="dream-lantern" style="--x:74%;--y:24%" data-dream="Dream lantern: I hope every dream you have finds you, with Mihruu beside you."><span>dreams</span></button>
+          <button type="button" class="dream-lantern" style="--x:82%;--y:64%" data-dream="Forever lantern: old age, silly names, and still choosing each other."><span>forever</span></button>
+          <button type="button" class="dream-lantern" style="--x:25%;--y:78%" data-dream="Art lantern: may your hands keep drawing and painting every beautiful thing inside you."><span>art</span></button>
+          <button type="button" class="dream-lantern" style="--x:48%;--y:18%" data-dream="Music lantern: guitar, ocarina, and every little song that makes Salvuu happy."><span>music</span></button>
+          <button type="button" class="dream-lantern" style="--x:66%;--y:78%" data-dream="Kindness lantern: may the world be as gentle to you as you are to it, my so damn beautiful, pretty, gorgeous girl, everything I need in a girl."><span>kindness</span></button>
+          <span class="shooting-star one"></span>
+          <span class="shooting-star two"></span>
+          <span class="shooting-star three"></span>
+        </div>
+        <p class="dream-lantern-note" id="dream-lantern-note">Pick a lantern and I will save that dream for us.</p>
+      </section>
+
+      <section class="mood-section reveal-scene extra-love-section playful-section" id="mood-selector" aria-labelledby="mood-title">
+        <p class="eyebrow">Mood selector</p>
+        <h2 id="mood-title">How is my Salvuu feeling?</h2>
+        <div class="mood-grid">
+          <button type="button" data-mood="Happy Salvuu deserves celebration, kisses, flowers, and Mihruu smiling like an idiot.">happy</button>
+          <button type="button" data-mood="Tired Salvuu gets rest, soft words, and no pressure to be anything except loved.">tired</button>
+          <button type="button" data-mood="Missing-me Salvuu should look at the moon. Mihruu is missing her too.">missing you</button>
+          <button type="button" data-mood="Shy Salvuu is still my gorgeous girl, and yes, Mihruu is blushing too.">shy</button>
+          <button type="button" data-mood="Sleepy Salvuu gets forehead kisses in spirit and a promise that she is safe.">sleepy</button>
+        </div>
+        <p class="mood-result" id="mood-result">Tap a mood for a matching Mihruu note.</p>
+      </section>
+
+      <section class="hold-hug-section reveal-scene extra-love-section playful-section" id="hold-hug" aria-labelledby="hold-hug-title">
+        <p class="eyebrow">Hold to hug</p>
+        <h2 id="hold-hug-title">Press and hold for a Mihruu hug</h2>
+        <button class="hold-hug-button" id="hold-hug-button" type="button">
+          <span id="hold-hug-fill"></span>
+          <b>hold me</b>
+        </button>
+        <p class="hold-hug-note" id="hold-hug-note">Hug waiting.</p>
+      </section>
+
+      <section class="my-girl-section reveal-scene extra-love-section playful-section" id="my-girl" aria-labelledby="my-girl-title">
+        <p class="eyebrow">Reasons you're my girl</p>
+        <h2 id="my-girl-title">Tap through the little reasons</h2>
+        <div class="girl-carousel">
+          <button class="ghost-btn small" id="girl-prev" type="button">Prev</button>
+          <p id="girl-reason">Your heart makes love feel safe.</p>
+          <button class="primary-btn small" id="girl-next" type="button">Next</button>
+        </div>
+      </section>
+
+      <section class="treasure-map-section reveal-scene extra-love-section playful-section" id="treasure-map" aria-labelledby="treasure-map-title">
+        <p class="eyebrow">Birthday treasure map</p>
+        <h2 id="treasure-map-title">Follow the path to Mihruu</h2>
+        <div class="treasure-map">
+          <button class="map-stop bouquet-stop" type="button" data-stop="Bouquet stop: her favorite flowers are ready."><span>bouquet</span></button>
+          <button class="map-stop cake-stop" type="button" data-stop="Cake stop: make a wish and Mihruu keeps it safe."><span>cake</span></button>
+          <button class="map-stop moon-stop" type="button" data-stop="Moon stop: same sky, same love."><span>moon</span></button>
+          <button class="map-stop future-stop" type="button" data-stop="Future stop: whatever we do, we do it together."><span>future</span></button>
+          <button class="map-stop mihruu-stop" type="button" data-stop="Mihruu stop: he is here, always choosing Salvuu."><span>Mihruu</span></button>
+          <span class="map-path"></span>
+          <span class="map-compass" aria-hidden="true"></span>
+          <span class="map-mountains" aria-hidden="true"></span>
+          <span class="map-river" aria-hidden="true"></span>
+          <span class="map-x" aria-hidden="true">x</span>
+        </div>
+        <p class="map-note" id="map-note">Tap a stop on the map.</p>
+      </section>
+
+      <section class="voice-love-section reveal-scene extra-love-section playful-section" id="voice-love" aria-labelledby="voice-love-title">
+        <p class="eyebrow">Her voice</p>
+        <h2 id="voice-love-title">Your voice is one of my favorite sounds</h2>
+        <div class="voice-love-card">
+          <div class="voice-wave" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <p>
+            I love your voice. It is cute, soft, and somehow feels like home
+            even through a phone. I love hearing you talk, laugh, sing, get shy,
+            explain things, and just be my Salvuu.
+          </p>
+        </div>
+      </section>
+
+      <section class="forever-contract-section reveal-scene extra-love-section playful-section" id="forever-contract" aria-labelledby="contract-title">
+        <p class="eyebrow">Forever contract</p>
+        <h2 id="contract-title">Sign with love</h2>
+        <div class="contract-card">
+          <label><input type="checkbox" /> Mihruu will cherish Salvuu.</label>
+          <label><input type="checkbox" /> Salvuu will accept birthday spoiling.</label>
+          <label><input type="checkbox" /> Both will choose each other.</label>
+          <button class="primary-btn" id="contract-button" type="button">Sign with love</button>
+          <p id="contract-result">Waiting for signatures.</p>
+        </div>
+      </section>
+
+      <section class="tiny-home-section reveal-scene extra-love-section playful-section" id="tiny-home" aria-labelledby="tiny-home-title">
+        <p class="eyebrow">Someday garden map</p>
+        <h2 id="tiny-home-title">Tap a future place I want to make for you</h2>
+        <div class="tiny-home-scene future-garden-map">
+          <div class="garden-map-center">
+            <span class="map-sun"></span>
+            <span class="map-book"></span>
+            <span class="map-flower one"></span>
+            <span class="map-flower two"></span>
+            <h3>Salvuu's little world</h3>
+            <p>A future made of flowers, books, art, moon talks, sweets, spicy food, and Mihruu quietly taking care of her.</p>
+          </div>
+          <div class="future-home-grid garden-place-grid">
+            <button class="home-part garden-place flower-field-place" type="button" data-home="Flower field: I want to plant you a garden with tulips, roses, jasmine, and so many flowers that every morning feels like a birthday.">
+              <span>flowers</span><b>your garden</b>
+            </button>
+            <button class="home-part garden-place reading-place" type="button" data-home="Reading nook: a soft corner full of books, warm lights, blankets, and snacks while you disappear into your stories.">
+              <span>books</span><b>reading nook</b>
+            </button>
+            <button class="home-part garden-place art-place" type="button" data-home="Art picnic: paints, sketchbooks, guitar, ocarina, and Mihruu watching his favorite artist be magical.">
+              <span>artist</span><b>art picnic</b>
+            </button>
+            <button class="home-part garden-place moon-place" type="button" data-home="Moon bench: when the distance feels loud, we look at the same moon and remember it is still us.">
+              <span>moon</span><b>moon bench</b>
+            </button>
+            <button class="home-part garden-place cafe-place" type="button" data-home="Tiny cafe date: something sweet, something spicy, burgundy flowers on the table, and Salvuu smiling across from me.">
+              <span>date</span><b>tiny cafe</b>
+            </button>
+            <button class="home-part garden-place dream-place" type="button" data-home="Dream shelf: every dream of yours gets a tiny golden label, and I will be beside you while you reach them.">
+              <span>dreams</span><b>dream shelf</b>
+            </button>
+          </div>
+        </div>
+        <p class="home-note" id="home-note">Tap a place on Salvuu's little world.</p>
+      </section>
+
+      <section class="art-studio-section reveal-scene extra-love-section playful-section" id="art-studio" aria-labelledby="art-studio-title">
+        <p class="eyebrow">Salvuu's art studio</p>
+        <h2 id="art-studio-title">She is art and the artist</h2>
+        <div class="art-studio-board">
+          <article><span class="studio-icon pencil-icon"></span><h3>Drawing</h3><p>Your drawings feel like little pieces of your heart finding shape.</p></article>
+          <article><span class="studio-icon palette-icon"></span><h3>Painting</h3><p>You paint beautifully, and I hope you never stop creating.</p></article>
+          <article><span class="studio-icon guitar-icon"></span><h3>Guitar</h3><p>I love the musical side of you, soft and magical.</p></article>
+          <article><span class="studio-icon ocarina-icon"></span><h3>Ocarina</h3><p>Your tiny instrument side is so precious and so you.</p></article>
+        </div>
+      </section>
+
+      <section class="sweet-spicy-section reveal-scene extra-love-section playful-section" id="sweet-spicy" aria-labelledby="sweet-spicy-title">
+        <p class="eyebrow">Sweet and spicy date menu</p>
+        <h2 id="sweet-spicy-title">For both sides of my Salvuu</h2>
+        <div class="menu-date-grid">
+          <article><b>Sweet side</b><p>Dessert, soft words, cute smiles, and Mihruu spoiling his princess.</p></article>
+          <article><b>Spicy side</b><p>Spicy food, dramatic reactions, laughing together, and water nearby just in case.</p></article>
+          <article><b>Perfect mix</b><p>A date where she gets both, because Salvuu deserves every little thing she likes.</p></article>
+        </div>
+      </section>
+
+      <section class="good-stars-section reveal-scene extra-love-section playful-section" id="good-stars" aria-labelledby="good-stars-title">
+        <p class="eyebrow">Good girl stars</p>
+        <h2 id="good-stars-title">Tap stars for proud notes</h2>
+        <div class="good-star-board">
+          <button type="button" data-star="Good girl star: I am so proud of you.">star</button>
+          <button type="button" data-star="Pretty star: you are gorgeous in every possible way.">star</button>
+          <button type="button" data-star="Brave star: you keep going, and I notice.">star</button>
+          <button type="button" data-star="Forever star: Mihruu chooses Salvuu.">star</button>
+          <button type="button" data-star="Soft star: you deserve gentle love always.">star</button>
+          <button type="button" data-star="Artist star: you create beautifully because you are art too.">star</button>
+          <button type="button" data-star="Kind star: your kindness makes the world softer, and you are so damn beautiful, pretty, gorgeous, and everything Mihruu needs in a girl.">star</button>
+          <button type="button" data-star="Dream star: I hope every dream comes true with me beside you.">star</button>
+          <button type="button" data-star="Music star: your guitar and ocarina side is so precious.">star</button>
+          <button type="button" data-star="Queen star: my highness deserves the whole sky.">star</button>
+        </div>
+        <p class="star-note" id="star-note">Tap a star.</p>
+      </section>
+
+      <section class="kiss-delivery-section reveal-scene extra-love-section mini-game-section" id="kiss-delivery" aria-labelledby="kiss-delivery-title">
+        <p class="eyebrow">Kiss delivery</p>
+        <h2 id="kiss-delivery-title">Send kisses from Mihruu to Salvuu</h2>
+        <div class="kiss-lane" id="kiss-lane">
+          <span class="kiss-phone from">Mihruu</span>
+          <span class="kiss-phone to">Salvuu</span>
+        </div>
+        <button class="primary-btn" id="kiss-button" type="button">Send kiss</button>
+      </section>
+
+      <section class="playlist-builder-section reveal-scene extra-love-section mini-game-section" id="playlist-builder" aria-labelledby="playlist-builder-title">
+        <p class="eyebrow">Build our playlist</p>
+        <h2 id="playlist-builder-title">Pick a mood for the next song note</h2>
+        <div class="playlist-mood-grid">
+          <button type="button" data-song-note="Soft mood: this one is for sleepy calls and feeling safe with each other.">soft</button>
+          <button type="button" data-song-note="Missing you mood: this one is for the ache that still chooses love.">missing you</button>
+          <button type="button" data-song-note="Birthday mood: this one is for Salvuu being celebrated like the queen she is.">birthday</button>
+          <button type="button" data-song-note="Sleepy mood: this one is for quiet breathing, gentle voices, and staying close.">sleepy</button>
+          <button type="button" data-song-note="Romantic mood: this one is for all or nothing, always us.">romantic</button>
+        </div>
+        <p class="playlist-build-note" id="playlist-build-note">Choose a mood.</p>
+      </section>
+
+      <section class="love-wheel-section reveal-scene extra-love-section mini-game-section" id="love-wheel" aria-labelledby="love-wheel-title">
+        <p class="eyebrow">Spin the love wheel</p>
+        <h2 id="love-wheel-title">Let fate pick a little Mihruu surprise</h2>
+        <div class="love-wheel-wrap">
+          <button class="love-wheel" id="love-wheel-button" type="button" aria-label="Spin the love wheel">
+            <span>compliment</span><span>hug</span><span>flower</span><span>future</span><span>kiss</span><span>nickname</span>
+          </button>
+          <p id="love-wheel-result">Tap the wheel.</p>
+        </div>
+      </section>
+
+      <section class="crown-chooser-section reveal-scene extra-love-section mini-game-section" id="crown-chooser" aria-labelledby="crown-chooser-title">
+        <p class="eyebrow">Choose your crown</p>
+        <h2 id="crown-chooser-title">Which crown should my queen wear today?</h2>
+        <div class="crown-options">
+          <button type="button" data-crown="Burgundy crown selected. My queen looks royal in her favorite color." class="burgundy-crown">burgundy</button>
+          <button type="button" data-crown="Gold crown selected. Salvuu is glowing like birthday sunlight." class="gold-crown">gold</button>
+          <button type="button" data-crown="Flower crown selected. Tulips, roses, and jasmine for my princess." class="flower-crown">flowers</button>
+          <button type="button" data-crown="Moon crown selected. Same moon, same love, my highness." class="moon-crown">moon</button>
+        </div>
+        <p class="crown-note" id="crown-note">Pick a crown.</p>
+      </section>
+
+      <section class="cake-decorator-section reveal-scene extra-love-section mini-game-section" id="cake-decorator" aria-labelledby="cake-decorator-title">
+        <p class="eyebrow">Birthday smile card</p>
+        <h2 id="cake-decorator-title">Build a little card for Salvuu</h2>
+        <div class="mini-cake-stage smile-card-stage" id="mini-cake-stage">
+          <div class="smile-card">
+            <span class="smile-card-stamp">May 28</span>
+            <h3>Happy birthday my salvaachi</h3>
+            <p>Every tap adds one tiny reason Mihruu wants you smiling today.</p>
+            <div class="smile-card-charms" aria-hidden="true"></div>
+          </div>
+        </div>
+        <div class="cake-topping-buttons">
+          <button type="button" data-topping="proud">proud note</button>
+          <button type="button" data-topping="voice">voice love</button>
+          <button type="button" data-topping="flower">flower kiss</button>
+          <button type="button" data-topping="queen">queen note</button>
+          <button type="button" data-topping="forever">forever</button>
+        </div>
+      </section>
+
+      <section class="paint-salvuu-section reveal-scene extra-love-section mini-game-section" id="paint-salvuu" aria-labelledby="paint-salvuu-title">
+        <p class="eyebrow">Paint with Salvuu</p>
+        <h2 id="paint-salvuu-title">Draw tiny hearts, stars, and flowers</h2>
+        <div class="paint-tools">
+          <button type="button" data-color="#7b1736">burgundy</button>
+          <button type="button" data-color="#ff8dac">pink</button>
+          <button type="button" data-color="#fff4a8">yellow</button>
+          <button type="button" data-color="#5f9b75">green</button>
+          <button type="button" id="paint-clear">clear</button>
+        </div>
+        <canvas id="paint-canvas" width="900" height="420" aria-label="Cute drawing canvas"></canvas>
+      </section>
+
+      <section class="gift-box-section reveal-scene extra-love-section mini-game-section" id="gift-box" aria-labelledby="gift-box-title">
+        <p class="eyebrow">Open the gift box</p>
+        <h2 id="gift-box-title">A tiny surprise every time</h2>
+        <button class="gift-box" id="gift-box-button" type="button" aria-label="Open gift box">
+          <span class="gift-lid"></span><span class="gift-body"></span><span class="gift-ribbon"></span>
+        </button>
+        <p class="gift-note" id="gift-note">Tap the gift.</p>
+      </section>
+
+      <section class="phone-signal-section reveal-scene extra-love-section mini-game-section" id="phone-signal" aria-labelledby="phone-signal-title">
+        <p class="eyebrow">Long-distance signal</p>
+        <h2 id="phone-signal-title">Send hearts across the screen</h2>
+        <div class="signal-stage" id="signal-stage">
+          <span class="signal-phone from">Mihruu</span>
+          <span class="signal-phone to">Salvuu</span>
+        </div>
+        <button class="primary-btn" id="signal-button" type="button">Send signal</button>
+      </section>
+
+      <section class="flower-rain-section reveal-scene extra-love-section mini-game-section" id="flower-rain" aria-labelledby="flower-rain-title">
+        <p class="eyebrow">Flower rain mode</p>
+        <h2 id="flower-rain-title">Make tulips, roses, and jasmine fall</h2>
+        <button class="primary-btn" id="flower-rain-button" type="button">Start flower rain</button>
+      </section>
+
+      <section class="promise-locks-section reveal-scene extra-love-section mini-game-section" id="promise-locks" aria-labelledby="promise-locks-title">
+        <p class="eyebrow">Promise locks</p>
+        <h2 id="promise-locks-title">Unlock Mihruu's promises</h2>
+        <div class="promise-lock-grid">
+          <button type="button" data-promise="Care unlocked: I will take care of your heart properly.">care</button>
+          <button type="button" data-promise="Patience unlocked: I will be gentle with you, even on hard days.">patience</button>
+          <button type="button" data-promise="Loyalty unlocked: I choose Salvuu, all or nothing.">loyalty</button>
+          <button type="button" data-promise="Forever unlocked: growing old with you is the dream.">forever</button>
+          <button type="button" data-promise="Old age unlocked: same nicknames, softer mornings, still us.">old age</button>
+        </div>
+        <p class="promise-lock-note" id="promise-lock-note">Tap a lock.</p>
+      </section>
+
+      <section class="bookstore-date-section reveal-scene extra-love-section advanced-cute-section" id="bookstore-date" aria-labelledby="bookstore-date-title">
+        <p class="eyebrow">Bookstore date simulator</p>
+        <h2 id="bookstore-date-title">Pick a shelf for our future book date</h2>
+        <div class="bookstore-date-board">
+          <div class="bookstore-window">
+            <span class="book-shop-sign">Salvuu Reads</span>
+            <span class="book-shop-awning"></span>
+            <span class="book-stack stack-one"></span>
+            <span class="book-stack stack-two"></span>
+          </div>
+          <div class="bookstore-shelves">
+            <button type="button" data-book-date="Romance shelf: Mihruu buys you the softest love story, then dessert, then listens to your favorite line.">romance</button>
+            <button type="button" data-book-date="Fantasy shelf: we choose a magical book and pretend every flower outside is part of your kingdom.">fantasy</button>
+            <button type="button" data-book-date="Art shelf: sketchbooks, color pencils, and me proudly carrying everything you pick.">art books</button>
+            <button type="button" data-book-date="Cozy shelf: warm drink, quiet corner, and Salvuu reading while Mihruu keeps looking at her.">cozy reads</button>
+          </div>
+        </div>
+        <p class="bookstore-date-note" id="bookstore-date-note">Pick a shelf.</p>
+      </section>
+
+      <section class="dream-jars-section reveal-scene extra-love-section advanced-cute-section" id="dream-jars" aria-labelledby="dream-jars-title">
+        <p class="eyebrow">Dream jars</p>
+        <h2 id="dream-jars-title">Open little wishes I have for you</h2>
+        <div class="dream-jar-grid">
+          <button type="button" data-jar="Art dream: I hope your drawings and paintings keep growing until the whole world sees how special you are."><span>art</span></button>
+          <button type="button" data-jar="Peace dream: I hope life becomes gentle with you, because you deserve softness without asking."><span>peace</span></button>
+          <button type="button" data-jar="Book dream: I hope you always have time, quiet, and a perfect book waiting for you."><span>books</span></button>
+          <button type="button" data-jar="Us dream: I hope every future version of us still chooses all or nothing."><span>us</span></button>
+          <button type="button" data-jar="Success dream: I hope you achieve every dream with Mihruu beside you, cheering the loudest."><span>success</span></button>
+        </div>
+        <p class="dream-jar-note" id="dream-jar-note">Tap a jar.</p>
+      </section>
+
+      <section class="good-badges-section reveal-scene extra-love-section advanced-cute-section" id="good-badges" aria-labelledby="good-badges-title">
+        <p class="eyebrow">Good girl achievement badges</p>
+        <h2 id="good-badges-title">Collect Salvuu's badges</h2>
+        <div class="badge-board">
+          <button type="button" data-badge="Kind heart badge unlocked: your kindness is one of the prettiest things about you, and you are so damn beautiful, pretty, gorgeous, and everything I need in a girl.">kind heart</button>
+          <button type="button" data-badge="Reader badge unlocked: my book girl deserves a whole library of cozy days.">reader</button>
+          <button type="button" data-badge="Artist badge unlocked: you are art and artist in one precious package.">artist</button>
+          <button type="button" data-badge="Dream chaser badge unlocked: I am so proud of the future you are building.">dream chaser</button>
+          <button type="button" data-badge="Pretty girl badge unlocked: gorgeous, cute, hot, sweet, all of it, every day.">pretty girl</button>
+          <button type="button" data-badge="My queen badge unlocked: burgundy suits my highness perfectly.">my queen</button>
+        </div>
+        <p class="badge-note" id="badge-note">Tap a badge.</p>
+      </section>
+
+      <section class="airport-gate-section reveal-scene extra-love-section advanced-cute-section" id="airport-gate" aria-labelledby="airport-gate-title">
+        <p class="eyebrow">Long-distance airport gate</p>
+        <h2 id="airport-gate-title">Boarding pass to Salvuu</h2>
+        <div class="boarding-pass">
+          <div>
+            <span>Passenger</span>
+            <strong>Mihruu</strong>
+          </div>
+          <div>
+            <span>Destination</span>
+            <strong>Salvuu</strong>
+          </div>
+          <div>
+            <span>Gate</span>
+            <strong>Feb 13</strong>
+          </div>
+          <div>
+            <span>Status</span>
+            <strong id="gate-status">waiting to hug you</strong>
+          </div>
+          <button class="primary-btn" id="boarding-button" type="button">Stamp boarding pass</button>
+        </div>
+      </section>
+
+      <section class="love-library-section reveal-scene extra-love-section advanced-cute-section" id="love-library" aria-labelledby="love-library-title">
+        <p class="eyebrow">Library shelf of love</p>
+        <h2 id="love-library-title">Open a book from Mihruu's shelf</h2>
+        <div class="love-library-shelf">
+          <button type="button" data-book="The Girl I Choose: every chapter says Salvuu, again and again.">The Girl I Choose</button>
+          <button type="button" data-book="How To Love Her Properly: with patience, loyalty, care, and forehead kisses.">How To Love Her Properly</button>
+          <button type="button" data-book="Flowers For My Reader: tulips, roses, jasmine, and a bookmark saved for her.">Flowers For My Reader</button>
+          <button type="button" data-book="All Or Nothing With You: the ending is old Mihruu and old Salvuu still laughing.">All Or Nothing</button>
+          <button type="button" data-book="Burgundy Princess: a royal record of my queen being gorgeous.">Burgundy Princess</button>
+        </div>
+        <p class="love-library-note" id="love-library-note">Pick a book.</p>
+      </section>
+
+      <section class="aurora-sky-section reveal-scene extra-love-section sparkle-section" id="aurora-sky" aria-labelledby="aurora-sky-title">
+        <p class="eyebrow">Aurora love sky</p>
+        <h2 id="aurora-sky-title">Tap constellations made for Salvuu</h2>
+        <div class="aurora-sky-board">
+          <button type="button" class="constellation birthday" data-aurora="Birthday constellation: May 28 is the day the world got my salvaachi."><span>birthday</span></button>
+          <button type="button" class="constellation anniversary" data-aurora="Anniversary constellation: Feb 13, four years of choosing each other."><span>Feb 13</span></button>
+          <button type="button" class="constellation flowers" data-aurora="Flower constellation: tulips, roses, and jasmine waiting for my queen."><span>flowers</span></button>
+          <button type="button" class="constellation books" data-aurora="Book constellation: a whole sky shelf for my reader girl."><span>books</span></button>
+          <button type="button" class="constellation forever" data-aurora="Forever constellation: all or nothing with you, in every sky."><span>forever</span></button>
+        </div>
+        <p class="aurora-note" id="aurora-note">Tap a constellation.</p>
+      </section>
+
+      <section class="magic-mirror-section reveal-scene extra-love-section sparkle-section" id="magic-mirror" aria-labelledby="magic-mirror-title">
+        <p class="eyebrow">Magic mirror</p>
+        <h2 id="magic-mirror-title">Ask the mirror about Salvuu</h2>
+        <button class="magic-mirror" id="magic-mirror-button" type="button" aria-label="Ask the magic mirror">
+          <span id="mirror-compliment">Tap me, pretty girl</span>
+        </button>
+      </section>
+
+      <section class="firefly-garden-section reveal-scene extra-love-section sparkle-section" id="firefly-garden" aria-labelledby="firefly-garden-title">
+        <p class="eyebrow">Firefly message garden</p>
+        <h2 id="firefly-garden-title">Catch glowing little messages</h2>
+        <div class="firefly-field">
+          <button type="button" class="firefly" style="--x:14%;--y:34%" data-firefly="Mihruu is so proud of you."></button>
+          <button type="button" class="firefly" style="--x:32%;--y:62%" data-firefly="You are safe with me, Salvuu."></button>
+          <button type="button" class="firefly" style="--x:54%;--y:28%" data-firefly="I choose you loudly and gently."></button>
+          <button type="button" class="firefly" style="--x:72%;--y:58%" data-firefly="Your dreams matter to me too."></button>
+          <button type="button" class="firefly" style="--x:86%;--y:36%" data-firefly="My good girl deserves the softest love."></button>
+        </div>
+        <p class="firefly-note" id="firefly-note">Tap a firefly.</p>
+      </section>
+
+      <section class="wish-fountain-section reveal-scene extra-love-section sparkle-section" id="wish-fountain" aria-labelledby="wish-fountain-title">
+        <p class="eyebrow">Wish fountain</p>
+        <h2 id="wish-fountain-title">Toss glowing coins for her dreams</h2>
+        <div class="wish-fountain">
+          <span class="fountain-water"></span>
+          <span class="fountain-basin"></span>
+          <div class="coin-bank" id="coin-bank"></div>
+        </div>
+        <div class="coin-buttons">
+          <button type="button" data-wish="Wish tossed: may Salvuu's art bloom bigger than she imagined.">art dream</button>
+          <button type="button" data-wish="Wish tossed: may her heart feel peaceful and protected.">peace</button>
+          <button type="button" data-wish="Wish tossed: may every book find her at the perfect time.">books</button>
+          <button type="button" data-wish="Wish tossed: may Mihruu stand beside her through everything.">us</button>
+        </div>
+        <p class="fountain-note" id="fountain-note">Toss a coin.</p>
+      </section>
+
+      <section class="shooting-letter-section reveal-scene extra-love-section sparkle-section" id="shooting-letter" aria-labelledby="shooting-letter-title">
+        <p class="eyebrow">Shooting star letter</p>
+        <h2 id="shooting-letter-title">Write her birthday wish in the sky</h2>
+        <div class="shooting-letter-sky" id="shooting-letter-sky">
+          <button class="shooting-letter-button" id="shooting-letter-button" type="button">Send the star</button>
+          <p id="shooting-letter-text">Waiting for the sky.</p>
+        </div>
+      </section>
+
+      <section class="sparkle-crown-section reveal-scene extra-love-section sparkle-section" id="sparkle-crown" aria-labelledby="sparkle-crown-title">
+        <p class="eyebrow">Sparkle crown ceremony</p>
+        <h2 id="sparkle-crown-title">Place gems on my queen's crown</h2>
+        <div class="crown-ceremony">
+          <div class="royal-crown" id="royal-crown"></div>
+          <div class="gem-buttons">
+            <button type="button" data-gem="kindness, beauty, and everything Mihruu needs">kindness + beauty</button>
+            <button type="button" data-gem="beauty">beauty</button>
+            <button type="button" data-gem="artist">artist</button>
+            <button type="button" data-gem="reader">reader</button>
+            <button type="button" data-gem="forever">forever</button>
+          </div>
+        </div>
+        <p class="crown-ceremony-note" id="crown-ceremony-note">Choose a gem.</p>
+      </section>
+
+      <section class="moon-mailbox-section reveal-scene extra-love-section sparkle-section" id="moon-mailbox" aria-labelledby="moon-mailbox-title">
+        <p class="eyebrow">Moon mailbox</p>
+        <h2 id="moon-mailbox-title">Open letters sent through the moon</h2>
+        <div class="moon-mailbox">
+          <button type="button" data-moon-letter="Open when you miss me: look at the moon, my love is standing there too.">miss me</button>
+          <button type="button" data-moon-letter="Open when tired: rest, my good girl. Mihruu is proud of you already.">tired</button>
+          <button type="button" data-moon-letter="Open when happy: I hope your smile gets even bigger because you deserve that.">happy</button>
+          <button type="button" data-moon-letter="Open when dreaming: I will cheer for every version of you.">dreaming</button>
+        </div>
+        <p class="moon-mailbox-note" id="moon-mailbox-note">Open a moon letter.</p>
+      </section>
+
+      <section class="promise-path-section reveal-scene extra-love-section sparkle-section" id="promise-path" aria-labelledby="promise-path-title">
+        <p class="eyebrow">Golden promise path</p>
+        <h2 id="promise-path-title">Light the path Mihruu promises to walk</h2>
+        <div class="promise-path">
+          <button type="button" data-path="Care stone lit: I will take care of you properly.">care</button>
+          <button type="button" data-path="Patience stone lit: I will be gentle with your heart.">patience</button>
+          <button type="button" data-path="Loyalty stone lit: I choose Salvuu, always.">loyalty</button>
+          <button type="button" data-path="Together stone lit: whatever we do, we do it together.">together</button>
+          <button type="button" data-path="Old age stone lit: growing old with you is the sweetest ending.">old age</button>
+        </div>
+        <p class="promise-path-note" id="promise-path-note">Tap the first stone.</p>
+      </section>
+
+      <section class="memory-globe-section reveal-scene extra-love-section sparkle-section" id="memory-globe" aria-labelledby="memory-globe-title">
+        <p class="eyebrow">Memory snow globe</p>
+        <h2 id="memory-globe-title">Shake a tiny world of us</h2>
+        <button class="memory-globe" id="memory-globe-button" type="button" aria-label="Shake the memory globe">
+          <span class="globe-glass"></span>
+          <span class="globe-scene"></span>
+          <span class="globe-base">M + S</span>
+        </button>
+        <p class="memory-globe-note" id="memory-globe-note">Tap the globe.</p>
+      </section>
+
+      <section class="flip-letter-section reveal-scene extra-love-section sparkle-section" id="flip-letter" aria-labelledby="flip-letter-title">
+        <p class="eyebrow">Book page letter</p>
+        <h2 id="flip-letter-title">Flip a tiny book written for Salvuu</h2>
+        <div class="flip-book">
+          <button class="book-page" type="button" data-page="Page one: I am so proud of how hardworking you are.">proud</button>
+          <button class="book-page" type="button" data-page="Page two: you draw beautifully, and architecture will be lucky to have your mind.">architecture</button>
+          <button class="book-page" type="button" data-page="Page three: your presence makes everything warm and fuzzy.">warmth</button>
+          <button class="book-page" type="button" data-page="Page four: there are not many souls like you in this world.">rare soul</button>
+          <button class="book-page" type="button" data-page="Page five: my chest will always be a soft place for you to rest.">safe place</button>
+        </div>
+        <p class="flip-letter-note" id="flip-letter-note">Open a page.</p>
+      </section>
+
+      <section class="polaroid-lights-section reveal-scene extra-love-section sparkle-section" id="polaroid-lights" aria-labelledby="polaroid-lights-title">
+        <p class="eyebrow">Polaroid string lights</p>
+        <h2 id="polaroid-lights-title">Tap a glowing future photo</h2>
+        <div class="polaroid-string">
+          <button type="button" data-polaroid="Future flowers note: I want to bring you flowers in person, not just through a screen."><img src="assets/photos/future-car-flowers.png" alt="" loading="lazy" decoding="async" /><span>flowers</span></button>
+          <button type="button" data-polaroid="Future road note: one day the distance becomes a road we already crossed."><img src="assets/photos/future-field-car.png" alt="" loading="lazy" decoding="async" /><span>road</span></button>
+          <button type="button" data-polaroid="Future hug note: I want you lying on my chest, safe, warm, and loved."><img src="assets/photos/future-hug-sketch.png" alt="" loading="lazy" decoding="async" /><span>hug</span></button>
+        </div>
+        <p class="polaroid-note" id="polaroid-note">Tap a photo.</p>
+      </section>
+
+      <section class="planet-orbit-section reveal-scene extra-love-section sparkle-section" id="planet-orbit" aria-labelledby="planet-orbit-title">
+        <p class="eyebrow">Tiny planet orbit</p>
+        <h2 id="planet-orbit-title">Everything sweet about her has its own planet</h2>
+        <div class="orbit-system">
+          <div class="salvuu-sun">Salvuu</div>
+          <button type="button" class="orbit-planet artist" data-planet="Artist planet: she is art and artist, all in one.">artist</button>
+          <button type="button" class="orbit-planet reader" data-planet="Reader planet: book girl with a soft little universe in her hands.">reader</button>
+          <button type="button" class="orbit-planet architect" data-planet="Architecture planet: she can draw worlds, and one day she can build them too.">build</button>
+          <button type="button" class="orbit-planet warmth" data-planet="Warmth planet: her presence makes everything feel fuzzy and safe.">warm</button>
+          <button type="button" class="orbit-planet rare" data-planet="Rare soul planet: not many souls like Salvuu exist in this world.">rare</button>
+        </div>
+        <p class="planet-note" id="planet-note">Tap a planet.</p>
+      </section>
+
+      <section class="dream-calendar-section reveal-scene extra-love-section sparkle-section" id="dream-calendar" aria-labelledby="dream-calendar-title">
+        <p class="eyebrow">Dream calendar</p>
+        <h2 id="dream-calendar-title">Special dates and someday days</h2>
+        <div class="dream-calendar">
+          <button type="button" data-date-note="May 28: Salvuu's birthday, the day my favorite girl arrived."><span>May</span><b>28</b></button>
+          <button type="button" data-date-note="February 13: our anniversary, four years of us choosing each other."><span>Feb</span><b>13</b></button>
+          <button type="button" data-date-note="October 20: Mihruu's birthday, another date that belongs to our story."><span>Oct</span><b>20</b></button>
+          <button type="button" data-date-note="Someday: the day I finally hold you and the screen stops being between us."><span>soon</span><b>us</b></button>
+        </div>
+        <p class="dream-calendar-note" id="dream-calendar-note">Tap a date.</p>
+      </section>
+
+      <section class="architect-dream-section reveal-scene extra-love-section sparkle-section" id="architect-dream" aria-labelledby="architect-dream-title">
+        <p class="eyebrow">Future architect</p>
+        <h2 id="architect-dream-title">She draws dreams well enough to build them</h2>
+        <div class="blueprint-board">
+          <span class="blueprint-grid"></span>
+          <button type="button" class="blueprint-point studio" data-blueprint="Studio wing: a space for her drawings, paintings, and architecture ideas.">studio</button>
+          <button type="button" class="blueprint-point library" data-blueprint="Library wing: shelves and shelves because my girl reads so much.">library</button>
+          <button type="button" class="blueprint-point garden" data-blueprint="Garden wing: tulips, roses, jasmine, and every flower I want to plant for her.">garden</button>
+          <button type="button" class="blueprint-point future" data-blueprint="Future wing: I hope she achieves every dream with me by her side.">future</button>
+        </div>
+        <p class="blueprint-note" id="blueprint-note">Tap a blueprint point.</p>
+      </section>
+
+      <section class="chest-comfort-section reveal-scene extra-love-section sparkle-section" id="chest-comfort" aria-labelledby="chest-comfort-title">
+        <p class="eyebrow">Warm safe place</p>
+        <h2 id="chest-comfort-title">A little place for resting on Mihruu's chest</h2>
+        <div class="comfort-card">
+          <div class="comfort-heart" id="comfort-heart"></div>
+          <button class="primary-btn" id="comfort-button" type="button">Start heartbeat</button>
+        </div>
+        <p class="comfort-note" id="comfort-note">Tap when Salvuu needs softness.</p>
+      </section>
+
+      <section class="architecture-studio-section reveal-scene extra-love-section sparkle-section" id="architecture-studio" aria-labelledby="architecture-studio-title">
+        <p class="eyebrow">Architecture studio desk</p>
+        <h2 id="architecture-studio-title">Future engineer, artist heart</h2>
+        <div class="studio-desk">
+          <div class="desk-blueprint">
+            <span class="ruler"></span>
+            <span class="draft-circle"></span>
+            <span class="draft-building"></span>
+          </div>
+          <div class="studio-tools">
+            <button type="button" data-studio="Drafting note: your drawings already feel like you can imagine whole worlds before they exist.">draft</button>
+            <button type="button" data-studio="Engineer note: I hope you become the architecture engineer you dream of being.">engineer</button>
+            <button type="button" data-studio="Hardworking note: I see how much effort you put in, and I am so proud of you.">effort</button>
+            <button type="button" data-studio="Future note: one day I want to stand beside something you designed and say, that's my girl.">future</button>
+          </div>
+        </div>
+        <p class="studio-desk-note" id="studio-desk-note">Tap a desk tool.</p>
+      </section>
+
+      <section class="reader-night-section reveal-scene extra-love-section sparkle-section" id="reader-night" aria-labelledby="reader-night-title">
+        <p class="eyebrow">Reader's cozy night</p>
+        <h2 id="reader-night-title">A soft reading night for my book girl</h2>
+        <div class="reading-room">
+          <span class="reading-lamp"></span>
+          <span class="rain-window"></span>
+          <span class="book-pile"></span>
+          <div class="bookmark-row">
+            <button type="button" data-bookmark="Bookmark saved: Mihruu brings snacks while Salvuu reads one more chapter.">chapter</button>
+            <button type="button" data-bookmark="Bookmark saved: warm blanket, soft light, no stress, just my reader girl.">blanket</button>
+            <button type="button" data-bookmark="Bookmark saved: tell me your favorite line and I will listen properly.">favorite line</button>
+          </div>
+        </div>
+        <p class="reader-night-note" id="reader-night-note">Tap a bookmark.</p>
+      </section>
+
+      <section class="trophy-wall-section reveal-scene extra-love-section sparkle-section" id="trophy-wall" aria-labelledby="trophy-wall-title">
+        <p class="eyebrow">Hardworking girl trophy wall</p>
+        <h2 id="trophy-wall-title">Awards Mihruu gives Salvuu forever</h2>
+        <div class="trophy-wall">
+          <button type="button" data-trophy="Award unlocked: hardest working girl, even when nobody notices enough.">hardworking</button>
+          <button type="button" data-trophy="Award unlocked: kindest heart in the room, so damn beautiful, pretty, gorgeous, and everything I need in a girl.">kind heart</button>
+          <button type="button" data-trophy="Award unlocked: artist and future architect with beautiful hands and ideas.">creator</button>
+          <button type="button" data-trophy="Award unlocked: warm presence, the kind that makes everything feel safe, and a girl so damn beautiful, pretty, gorgeous, and everything Mihruu needs.">warmth</button>
+          <button type="button" data-trophy="Award unlocked: rare soul, genuinely not many like you.">rare soul</button>
+          <button type="button" data-trophy="Award unlocked: Mihruu's good girl, queen, and everything.">my girl</button>
+        </div>
+        <p class="trophy-note" id="trophy-note">Tap an award.</p>
+      </section>
+
+      <section class="rare-soul-section reveal-scene extra-love-section sparkle-section" id="rare-soul" aria-labelledby="rare-soul-title">
+        <p class="eyebrow">Rare soul museum</p>
+        <h2 id="rare-soul-title">There are not many souls like her</h2>
+        <div class="rare-museum">
+          <button type="button" data-rare="Exhibit one: her softness makes love feel less scary.">softness</button>
+          <button type="button" data-rare="Exhibit two: her kindness stays with people, and she is so damn beautiful, pretty, gorgeous, and everything I need in a girl.">kindness</button>
+          <button type="button" data-rare="Exhibit three: her presence makes rooms warmer.">presence</button>
+          <button type="button" data-rare="Exhibit four: her creativity turns ordinary things into something precious.">creativity</button>
+          <button type="button" data-rare="Exhibit five: her love is worth every mile.">love</button>
+        </div>
+        <p class="rare-note" id="rare-note">Tap an exhibit.</p>
+      </section>
+
+      <section class="future-builder-section reveal-scene extra-love-section sparkle-section" id="future-builder" aria-labelledby="future-builder-title">
+        <p class="eyebrow">Build a future together</p>
+        <h2 id="future-builder-title">Tap blocks to build our little world</h2>
+        <div class="future-build-stage" id="future-build-stage">
+          <div class="build-blocks">
+            <button type="button" data-build="garden">garden</button>
+            <button type="button" data-build="library">library</button>
+            <button type="button" data-build="studio">studio</button>
+            <button type="button" data-build="cafe">cafe</button>
+            <button type="button" data-build="chest nap">safe place</button>
+          </div>
+        </div>
+        <p class="future-build-note" id="future-build-note">Add a future block.</p>
+      </section>
+
+      <section class="love-weather-section reveal-scene extra-love-section sparkle-section" id="love-weather" aria-labelledby="love-weather-title">
+        <p class="eyebrow">Warm fuzzy weather</p>
+        <h2 id="love-weather-title">Today's forecast: Salvuu makes everything warmer</h2>
+        <div class="weather-card">
+          <span class="weather-sun"></span>
+          <div>
+            <b id="weather-temp">100%</b>
+            <p id="weather-report">chance of Mihruu missing Salvuu with heavy flowers later.</p>
+          </div>
+          <button class="primary-btn" id="weather-button" type="button">Change forecast</button>
+        </div>
+      </section>
+
+      <section class="love-passport-section reveal-scene extra-love-section sparkle-section" id="love-passport" aria-labelledby="love-passport-title">
+        <p class="eyebrow">Love passport</p>
+        <h2 id="love-passport-title">Stamp the places we will go together</h2>
+        <div class="passport-book">
+          <button type="button" data-passport="Bookstore stamp: one book date for Salvuu and Mihruu.">bookstore</button>
+          <button type="button" data-passport="Flower shop stamp: tulips, roses, jasmine, and her smile.">flower shop</button>
+          <button type="button" data-passport="Cafe stamp: sweet and spicy food date.">cafe</button>
+          <button type="button" data-passport="Moon walk stamp: same moon, same love.">moon walk</button>
+          <button type="button" data-passport="Airport stamp: the distance finally gets smaller.">airport</button>
+        </div>
+        <p class="passport-note" id="passport-note">Tap a stamp.</p>
+      </section>
+
+      <section class="time-capsule-section reveal-scene extra-love-section sparkle-section" id="time-capsule" aria-labelledby="time-capsule-title">
+        <p class="eyebrow">Time capsule</p>
+        <h2 id="time-capsule-title">Notes for future Salvuu</h2>
+        <div class="time-capsule">
+          <button type="button" data-capsule="Future Salvuu after a hard day: Mihruu is still proud of you. Rest, my good girl.">hard day</button>
+          <button type="button" data-capsule="Future Salvuu when we meet: you made it through the distance, and I am right here.">when we meet</button>
+          <button type="button" data-capsule="Future Salvuu doubting herself: you are capable, hardworking, and rare.">doubt</button>
+          <button type="button" data-capsule="Future Salvuu chasing dreams: build them, draw them, live them. I will cheer.">dreams</button>
+        </div>
+        <p class="capsule-note" id="capsule-note">Open a capsule.</p>
+      </section>
+
+      <section class="care-menu-section reveal-scene extra-love-section sparkle-section" id="care-menu" aria-labelledby="care-menu-title">
+        <p class="eyebrow">Princess care menu</p>
+        <h2 id="care-menu-title">Choose how Mihruu should care for Salvuu</h2>
+        <div class="care-menu">
+          <button type="button" data-care="Care order: forehead kisses and no sadness allowed.">forehead kisses</button>
+          <button type="button" data-care="Care order: flowers, book date, and Mihruu carrying everything.">book date</button>
+          <button type="button" data-care="Care order: spicy food, sweet dessert, and water nearby.">food date</button>
+          <button type="button" data-care="Care order: chest nap, heartbeat, and soft hair touches.">chest nap</button>
+          <button type="button" data-care="Care order: art supplies and endless proud compliments.">art supplies</button>
+        </div>
+        <p class="care-order-note" id="care-order-note">Pick a care order.</p>
+      </section>
+
+      <section class="final-fireworks-section reveal-scene extra-love-section playful-section" id="final-fireworks" aria-labelledby="fireworks-title">
+        <p class="eyebrow">Final fireworks</p>
+        <h2 id="fireworks-title">Finish the birthday surprise</h2>
+        <button class="fireworks-button" id="fireworks-button" type="button">Launch love fireworks</button>
+        <p class="fireworks-message" id="fireworks-message">Ready when you are, my queen.</p>
+      </section>
+
+      <section class="voice-note-section reveal-scene extra-love-section" id="voice-note" aria-labelledby="voice-note-title">
+        <p class="eyebrow">Voice note</p>
+        <h2 id="voice-note-title">A place for Mihruu's voice</h2>
+        <p>
+          Add a short recording later if you want her to hear you say happy
+          birthday, my salvaachi. Until then, this little player is waiting.
+        </p>
+        <audio controls preload="none"></audio>
+      </section>
+
+      <section class="finale-section reveal-scene" id="finale" aria-labelledby="finale-title">
+        <p class="eyebrow">Final little thing</p>
+        <h2 id="finale-title">You are so loved</h2>
+        <p>
+          This whole tiny website is just a small way to say I hope your birthday
+          feels soft, pretty, and completely yours.
+        </p>
+      </section>
+
+      <section class="message-section reveal-scene" id="notes" aria-labelledby="message-title">
+        <div>
+          <p class="eyebrow">Little notes</p>
+          <h2 id="message-title">Some things I hope you remember</h2>
+        </div>
+        <div class="message-card" id="message-card">
+          You make ordinary days feel like they were secretly planned for us.
+        </div>
+      </section>
+
+      <section class="ninety-love-map-section reveal-scene sparkle-section" id="ninety-love-map" aria-labelledby="ninety-love-map-title">
+        <p class="eyebrow">Stop 90</p>
+        <h2 id="ninety-love-map-title">A tiny map of everything Mihruu loves about Salvuu</h2>
+        <div class="ninety-map-board">
+          <span class="map-route"></span>
+          <button type="button" class="love-map-pin pin-one" data-love-map="Flower stop: tulips, roses, jasmine, and every soft thing I want to bring you.">flowers</button>
+          <button type="button" class="love-map-pin pin-two" data-love-map="Book stop: my reader girl deserves shelves of peace and perfect stories.">books</button>
+          <button type="button" class="love-map-pin pin-three" data-love-map="Architecture stop: you draw dreams so well, and I know you can build them too.">build</button>
+          <button type="button" class="love-map-pin pin-four" data-love-map="Warmth stop: your presence makes everything fuzzy, soft, and safe.">warmth</button>
+          <button type="button" class="love-map-pin pin-five" data-love-map="Beauty stop: you are so damn beautiful, pretty, gorgeous, and everything I need in a girl.">beauty</button>
+          <button type="button" class="love-map-pin pin-six" data-love-map="Care stop: I will cherish you, take care of you, and choose you properly.">care</button>
+          <button type="button" class="love-map-pin pin-seven" data-love-map="Chest stop: come rest on Mihruu's chest whenever the world feels too loud.">safe</button>
+          <button type="button" class="love-map-pin pin-eight" data-love-map="Forever stop: all or nothing with you, birthday girl.">forever</button>
+        </div>
+        <p class="ninety-map-note" id="ninety-map-note">Tap a stop on the map.</p>
+      </section>
+
+      <section class="marry-soon-section reveal-scene sparkle-section hundred-section" id="marry-soon" aria-labelledby="marry-soon-title">
+        <p class="eyebrow">Stop 91</p>
+        <h2 id="marry-soon-title">Let's marry soon, my Salvuu</h2>
+        <div class="proposal-sky">
+          <span class="proposal-moon"></span>
+          <button class="proposal-button" id="proposal-button" type="button">Open the tiny future</button>
+        </div>
+        <p class="proposal-note" id="proposal-note">Tap the future.</p>
+      </section>
+
+      <section class="ring-box-section reveal-scene sparkle-section hundred-section" id="ring-box" aria-labelledby="ring-box-title">
+        <p class="eyebrow">Stop 92</p>
+        <h2 id="ring-box-title">A little ring box for someday</h2>
+        <button class="ring-box" id="ring-box-button" type="button" aria-label="Open ring box"><span></span></button>
+        <p class="ring-note" id="ring-note">Tap the box.</p>
+      </section>
+
+      <section class="vow-garden-section reveal-scene sparkle-section hundred-section" id="vow-garden" aria-labelledby="vow-garden-title">
+        <p class="eyebrow">Stop 93</p>
+        <h2 id="vow-garden-title">Plant little vows</h2>
+        <div class="vow-garden">
+          <button type="button" data-vow="Vow planted: I will choose you even on ordinary days.">choose</button>
+          <button type="button" data-vow="Vow planted: I will be gentle with your heart.">gentle</button>
+          <button type="button" data-vow="Vow planted: I will protect your peace.">peace</button>
+          <button type="button" data-vow="Vow planted: I will keep being proud of you.">proud</button>
+        </div>
+        <p class="vow-note" id="vow-note">Plant a vow.</p>
+      </section>
+
+      <section class="forever-home-section reveal-scene sparkle-section hundred-section" id="forever-home" aria-labelledby="forever-home-title">
+        <p class="eyebrow">Stop 94</p>
+        <h2 id="forever-home-title">A nest made of books, flowers, and us</h2>
+        <div class="forever-nest">
+          <button type="button" data-nest="Book corner added: my reader girl gets all the quiet she wants.">books</button>
+          <button type="button" data-nest="Flower corner added: tulips, roses, jasmine, always.">flowers</button>
+          <button type="button" data-nest="Chest nap corner added: her safest pillow is Mihruu.">chest nap</button>
+          <button type="button" data-nest="Architecture desk added: future engineer Salvuu gets her dream desk.">desk</button>
+        </div>
+        <p class="nest-note" id="nest-note">Tap a corner.</p>
+      </section>
+
+      <section class="old-us-section reveal-scene sparkle-section hundred-section" id="old-us" aria-labelledby="old-us-title">
+        <p class="eyebrow">Stop 95</p>
+        <h2 id="old-us-title">Old Mihruu and old Salvuu</h2>
+        <div class="old-us-card">
+          <button type="button" id="old-us-button">Peek at us later</button>
+        </div>
+        <p class="old-us-note" id="old-us-note">Tap to peek.</p>
+      </section>
+
+      <section class="dream-city-section reveal-scene sparkle-section hundred-section" id="dream-city" aria-labelledby="dream-city-title">
+        <p class="eyebrow">Stop 96</p>
+        <h2 id="dream-city-title">A city she could design</h2>
+        <div class="dream-city">
+          <button type="button" data-city="Library tower: because she reads and deserves stories everywhere.">library</button>
+          <button type="button" data-city="Art bridge: because her drawings connect feelings to beauty.">art bridge</button>
+          <button type="button" data-city="Flower plaza: because Mihruu will keep bringing flowers.">flowers</button>
+          <button type="button" data-city="Warm home street: because her presence makes every place softer.">warmth</button>
+        </div>
+        <p class="city-note" id="city-note">Tap a building.</p>
+      </section>
+
+      <section class="morning-routine-section reveal-scene sparkle-section hundred-section" id="morning-routine" aria-labelledby="morning-routine-title">
+        <p class="eyebrow">Stop 97</p>
+        <h2 id="morning-routine-title">Someday morning routine</h2>
+        <div class="routine-grid">
+          <button type="button" data-routine="Morning: flowers on the table and Salvuu still sleepy cute.">flowers</button>
+          <button type="button" data-routine="Morning: Mihruu making sure my good girl ate properly.">breakfast</button>
+          <button type="button" data-routine="Morning: one forehead kiss before the day starts.">kiss</button>
+        </div>
+        <p class="routine-note" id="morning-note">Tap a morning.</p>
+      </section>
+
+      <section class="night-routine-section reveal-scene sparkle-section hundred-section" id="night-routine" aria-labelledby="night-routine-title">
+        <p class="eyebrow">Stop 98</p>
+        <h2 id="night-routine-title">Someday night routine</h2>
+        <div class="routine-grid">
+          <button type="button" data-routine="Night: she reads, I stay close, everything is calm.">reading</button>
+          <button type="button" data-routine="Night: she rests on my chest and the world becomes quiet.">chest</button>
+          <button type="button" data-routine="Night: same moon, same bed, no distance.">moon</button>
+        </div>
+        <p class="routine-note" id="night-note">Tap a night.</p>
+      </section>
+
+      <section class="hundred-reasons-section reveal-scene sparkle-section hundred-section" id="hundred-reasons" aria-labelledby="hundred-reasons-title">
+        <p class="eyebrow">Stop 99</p>
+        <h2 id="hundred-reasons-title">100 reasons would still not be enough</h2>
+        <button class="primary-btn" id="reason-burst-button" type="button">Make reasons sparkle</button>
+        <div class="reason-cloud" id="reason-cloud"></div>
+      </section>
+
+      <section class="final-blessing-section reveal-scene sparkle-section hundred-section" id="final-blessing" aria-labelledby="final-blessing-title">
+        <p class="eyebrow">Stop 100</p>
+        <h2 id="final-blessing-title">The hundredth stop is still just this: I love you</h2>
+        <div class="final-blessing-card">
+          <p>Happy birthday my salvaachi. You are so damn beautiful, pretty, gorgeous, kind, hardworking, rare, warm, and everything I need in a girl. Let's grow old, marry soon, build dreams, and choose each other properly.</p>
+          <button class="fireworks-button" id="hundred-fireworks-button" type="button">Launch the 100th sparkle</button>
+        </div>
+      </section>
+    </main>
+
+    <aside class="flower-drawer" id="flower-drawer" aria-hidden="true">
+      <button class="drawer-close" id="drawer-close" type="button" aria-label="Close flower details">
+        x
+      </button>
+      <div class="drawer-art" id="drawer-art"></div>
+      <p class="eyebrow">Flower meaning</p>
+      <h2 id="drawer-title">Roses</h2>
+      <p id="drawer-copy"></p>
+      <button class="primary-btn" id="drawer-toggle" type="button">Add to bouquet</button>
+    </aside>
+    <div class="drawer-backdrop" id="drawer-backdrop"></div>
+
+    <script src="script.js?v=restore-images-20260514"></script>
+    <script src="extras.js?v=restore-images-20260514"></script>
+  </body>
+</html>
